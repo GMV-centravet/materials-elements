@@ -1,0 +1,9 @@
+.color-buttons-demo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  materials-button {
+    margin: 8px;
+  }
+}
