@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Listen, State } from '@stencil/core';
 import { Router } from '@vaadin/router';
 
 @Component({
@@ -7,6 +7,11 @@ import { Router } from '@vaadin/router';
 })
 export class AppRoot {
 
+  @State() smallScreen: boolean;
+
+  componentWillLoad() {
+    this.smallScreen = window.innerWidth <= 768;
+  }
 
   componentDidLoad() {
     const router = new Router(document.getElementById('outlet'));
@@ -45,9 +50,14 @@ export class AppRoot {
     ]);
   }
 
+  @Listen('resize', { target: 'window' })
+  windowResize() {
+    this.smallScreen = window.innerWidth <= 768;
+  }
+
   render() {
     return (
-      <materials-drawer-with-top-app-bar open drawerType="below" appBarType="fixed" appBarTitle="Materials">
+      <materials-drawer-with-top-app-bar open={!this.smallScreen} appBarType="fixed" drawerType='below' appBarTitle="Materials">
         <materials-drawer-list-item label="Introduction" targetUrl="/intro" />
         <materials-drawer-list-item label="Buttons" targetUrl="/components/button" />
         <materials-drawer-list-item label="Cards" targetUrl="/components/card" />

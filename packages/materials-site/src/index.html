@@ -30,6 +30,9 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css" />
+
   <style>
     html {
       --mdc-theme-primary: #ff9100;
@@ -48,11 +51,16 @@
 
     }
 
+    .github-fork-ribbon::before {
+      background-color: #333;
+    }
+
   </style>
 </head>
 
 <body>
-
+  <a class="github-fork-ribbon" href="https://github.com/GMV-centravet/materials" data-ribbon="Fork me on GitHub"
+    title="Fork me on GitHub">Fork me on GitHub</a>
   <app-root></app-root>
 
 </body>
