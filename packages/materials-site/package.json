@@ -11,10 +11,11 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build",
+    "build": "stencil build && npm run netlify:prepare",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watch"
+    "test.watch": "stencil test --spec --e2e --watch",
+    "netlify:prepare": "mv ./netlify/* ./www"
   },
   "dependencies": {
     "@gmvdev/materials": "0.0.2-75d511b1640420cbf759ff8a54579817e9aaadd8.0",
