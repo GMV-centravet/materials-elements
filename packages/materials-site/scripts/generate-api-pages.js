@@ -110,7 +110,7 @@ readdirp('_docs', settings)
     // Create app-component-api.tsx from readme.html
     fs.readFileSync(entry.fullPath, 'utf8', function (err, data) {
       if (err) {
-        return console.log(err);
+        console.log(err);
       }
       let result = data.replace(/%CLASS_NAME%/g, className);
       result = result.replace(/%TAG_NAME%/g, componentName);
@@ -118,7 +118,10 @@ readdirp('_docs', settings)
       result = result.replace(/<hr>/g, '<hr/>');
 
       fs.writeFileSync(`${componentRoot}${path.sep}app-${componentName}-api${path.sep}${componentName}-api-page.tsx`, result, 'utf8', function (err) {
-        if (err) return console.log(err);
+        if (err) {
+          console.log(err);
+          return;
+        }
         console.log(`app-${componentName}-api.tsx created successfully`);
       });
     });
