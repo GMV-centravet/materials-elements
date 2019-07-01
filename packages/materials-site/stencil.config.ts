@@ -4,7 +4,7 @@ import { sass } from '@stencil/sass';
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  namespace: 'materials',
+  namespace: 'materials-site',
   plugins: [
     sass({ includePaths: ['./node_modules'] })
   ],

@@ -37,16 +37,18 @@ export class AppRoot {
       { path: '/components/linear-progress', component: 'app-linear-progress-demo' },
       { path: '/components/list', component: 'app-list-demo' },
       { path: '/components/menu', component: 'app-menu-demo' },
+      { path: '/components/multiple-select', component: 'app-multiple-select-demo' },
       { path: '/components/radio', component: 'app-radio-demo' },
       { path: '/components/select', component: 'app-select-demo' },
       { path: '/components/snackbar', component: 'app-snackbar-demo' },
       { path: '/components/stepper', component: 'app-stepper-demo' },
       { path: '/components/switch', component: 'app-switch-demo' },
-      { path: '/components/tabs', component: 'app-tabs-demo' },
+      { path: '/components/tabs', component: 'app-tabs-tabs' },
       { path: '/components/textarea', component: 'app-textarea-demo' },
       { path: '/components/text-field', component: 'app-text-field-demo' },
       { path: '/components/timepicker', component: 'app-timepicker-demo' },
       { path: '/components/top-app-bar', component: 'app-top-app-bar-demo' },
+      /* ROUTE GENERATION NEEDLE */
     ]);
   }
 
@@ -74,6 +76,7 @@ export class AppRoot {
         <materials-drawer-list-item label="Linear-progress" targetUrl="/components/linear-progress" />
         <materials-drawer-list-item label="List" targetUrl="/components/list" />
         <materials-drawer-list-item label="Menu" targetUrl="/components/menu" />
+        <materials-drawer-list-item label="Multiple Select" targetUrl="/components/multiple-select" />
         <materials-drawer-list-item label="Radio" targetUrl="/components/radio" />
         <materials-drawer-list-item label="Select" targetUrl="/components/select" />
         <materials-drawer-list-item label="Snackbar" targetUrl="/components/snackbar" />
@@ -84,6 +87,7 @@ export class AppRoot {
         <materials-drawer-list-item label="Text field" targetUrl="/components/text-field" />
         <materials-drawer-list-item label="Timepicker" targetUrl="/components/timepicker" />
         <materials-drawer-list-item label="Top app bar" targetUrl="/components/top-app-bar" />
+        {/* MENU GENERATION NEEDLE */}
         <div id="outlet" slot="main" />
       </materials-drawer-with-top-app-bar>
     );

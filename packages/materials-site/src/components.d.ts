@@ -30,7 +30,11 @@ export namespace Components {
   interface AppHome {}
   interface AppIconDemo {}
   interface AppIntroductionPage {}
+  interface AppMultipleSelectDemo {}
   interface AppRoot {}
+  interface AppTabsApi {}
+  interface AppTabsDemo {}
+  interface AppTabsTabs {}
 }
 
 declare global {
@@ -150,10 +154,34 @@ declare global {
     new (): HTMLAppIntroductionPageElement;
   };
 
+  interface HTMLAppMultipleSelectDemoElement extends Components.AppMultipleSelectDemo, HTMLStencilElement {}
+  var HTMLAppMultipleSelectDemoElement: {
+    prototype: HTMLAppMultipleSelectDemoElement;
+    new (): HTMLAppMultipleSelectDemoElement;
+  };
+
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
+  };
+
+  interface HTMLAppTabsApiElement extends Components.AppTabsApi, HTMLStencilElement {}
+  var HTMLAppTabsApiElement: {
+    prototype: HTMLAppTabsApiElement;
+    new (): HTMLAppTabsApiElement;
+  };
+
+  interface HTMLAppTabsDemoElement extends Components.AppTabsDemo, HTMLStencilElement {}
+  var HTMLAppTabsDemoElement: {
+    prototype: HTMLAppTabsDemoElement;
+    new (): HTMLAppTabsDemoElement;
+  };
+
+  interface HTMLAppTabsTabsElement extends Components.AppTabsTabs, HTMLStencilElement {}
+  var HTMLAppTabsTabsElement: {
+    prototype: HTMLAppTabsTabsElement;
+    new (): HTMLAppTabsTabsElement;
   };
   interface HTMLElementTagNameMap {
     'app-button-api': HTMLAppButtonApiElement;
@@ -175,7 +203,11 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-icon-demo': HTMLAppIconDemoElement;
     'app-introduction-page': HTMLAppIntroductionPageElement;
+    'app-multiple-select-demo': HTMLAppMultipleSelectDemoElement;
     'app-root': HTMLAppRootElement;
+    'app-tabs-api': HTMLAppTabsApiElement;
+    'app-tabs-demo': HTMLAppTabsDemoElement;
+    'app-tabs-tabs': HTMLAppTabsTabsElement;
   }
 }
 
@@ -201,7 +233,11 @@ declare namespace LocalJSX {
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
   interface AppIconDemo extends JSXBase.HTMLAttributes<HTMLAppIconDemoElement> {}
   interface AppIntroductionPage extends JSXBase.HTMLAttributes<HTMLAppIntroductionPageElement> {}
+  interface AppMultipleSelectDemo extends JSXBase.HTMLAttributes<HTMLAppMultipleSelectDemoElement> {}
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
+  interface AppTabsApi extends JSXBase.HTMLAttributes<HTMLAppTabsApiElement> {}
+  interface AppTabsDemo extends JSXBase.HTMLAttributes<HTMLAppTabsDemoElement> {}
+  interface AppTabsTabs extends JSXBase.HTMLAttributes<HTMLAppTabsTabsElement> {}
 
   interface IntrinsicElements {
     'app-button-api': AppButtonApi;
@@ -223,7 +259,11 @@ declare namespace LocalJSX {
     'app-home': AppHome;
     'app-icon-demo': AppIconDemo;
     'app-introduction-page': AppIntroductionPage;
+    'app-multiple-select-demo': AppMultipleSelectDemo;
     'app-root': AppRoot;
+    'app-tabs-api': AppTabsApi;
+    'app-tabs-demo': AppTabsDemo;
+    'app-tabs-tabs': AppTabsTabs;
   }
 }
 
