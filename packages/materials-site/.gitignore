@@ -1,6 +1,9 @@
 dist/
 !www/favicon.ico
 www/
+docs/components
+docs/dist
+_docs
 
 *~
 *.sw[mnpcod]

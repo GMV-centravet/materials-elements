@@ -12,13 +12,16 @@
   ],
   "scripts": {
     "build": "stencil build && npm run netlify:prepare",
+    "download": "rm -rf docs/components/** && node scripts/download-docs-from-github && cd docs/dist/src && cp -R --parents components/**/readme.md ../.. && cd ../.. && rm -rf dist",
+    "docs": "markdown-folder-to-html",
+    "tmp": "node scripts/generate-api-pages",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watch",
     "netlify:prepare": "cp netlify/* www/"
   },
   "dependencies": {
-    "@gmvdev/materials": "0.0.2-75d511b1640420cbf759ff8a54579817e9aaadd8.0",
+    "@gmvdev/materials": "0.0.4-ee6d7b552bbf7a01b283e972127f40e8c7fcc821.0",
     "@material/animation": "~1.0.0",
     "@material/base": "~1.0.0",
     "@material/button": "~2.1.1",
@@ -57,9 +60,13 @@
     "@stencil/sass": "0.2.1",
     "@types/jest": "24.0.13",
     "@types/puppeteer": "1.12.2",
+    "del-cli": "^2.0.0",
+    "download-git-repo": "^2.0.0",
     "jest": "24.8.0",
     "jest-cli": "24.8.0",
+    "markdown-folder-to-html": "^2.2.0",
     "puppeteer": "1.17.0",
+    "readdirp": "^3.0.2",
     "workbox-build": "4.3.1"
   },
   "publishConfig": {
