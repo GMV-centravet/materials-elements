@@ -5,6 +5,8 @@ docs/components
 docs/dist
 _docs
 
+src/app/demos/**/app-*-api/*.tsx
+
 *~
 *.sw[mnpcod]
 *.log
