@@ -126,22 +126,22 @@ readdirp('_docs', settings)
       });
     });
 
-    // Add component route to app-root.tsx
-    fs.readFile(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, function (err, data) {
-      if (err) throw err;
-      let updatedRoot = data;
-      if (!updatedRoot.includes(`app-${componentName}-tabs`)) {
-        updatedRoot = updatedRoot.replace('/* ROUTE GENERATION NEEDLE */', `{ path: '/components/${componentName}', component: 'app-${componentName}-tabs' },\r\n/* ROUTE GENERATION NEEDLE */`)
-      }
-      if (!updatedRoot.includes(`targetUrl="/components/${componentName}"`)) {
-        const menuLabel = snakeToCamel(componentName.charAt(0).toUpperCase() + componentName.slice(1).toLowerCase()).replace('-', ' ');
-        updatedRoot = updatedRoot.replace('{/* MENU GENERATION NEEDLE */}', `<materials-drawer-list-item label="${menuLabel}" targetUrl="/components/${componentName}" />\r\n{/* MENU GENERATION NEEDLE */}`)
-      }
-      fs.writeFile(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, updatedRoot, 'utf8', function (err) {
-        if (err) return console.log(err);
-        console.log(`${componentName} added to app-root.tsx`);
-      });
-    });
+    // // Add component route to app-root.tsx
+    // fs.readFile(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, function (err, data) {
+    //   if (err) throw err;
+    //   let updatedRoot = data;
+    //   if (!updatedRoot.includes(`app-${componentName}-tabs`)) {
+    //     updatedRoot = updatedRoot.replace('/* ROUTE GENERATION NEEDLE */', `{ path: '/components/${componentName}', component: 'app-${componentName}-tabs' },\r\n/* ROUTE GENERATION NEEDLE */`)
+    //   }
+    //   if (!updatedRoot.includes(`targetUrl="/components/${componentName}"`)) {
+    //     const menuLabel = snakeToCamel(componentName.charAt(0).toUpperCase() + componentName.slice(1).toLowerCase()).replace('-', ' ');
+    //     updatedRoot = updatedRoot.replace('{/* MENU GENERATION NEEDLE */}', `<materials-drawer-list-item label="${menuLabel}" targetUrl="/components/${componentName}" />\r\n{/* MENU GENERATION NEEDLE */}`)
+    //   }
+    //   fs.writeFile(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, updatedRoot, 'utf8', function (err) {
+    //     if (err) return console.log(err);
+    //     console.log(`${componentName} added to app-root.tsx`);
+    //   });
+    // });
   })
   .on('warn', (warn) => {
     console.log("Warn: ", warn);
