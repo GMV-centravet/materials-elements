@@ -37,7 +37,7 @@ readdirp('_docs', settings)
     // Create app-component-tabs page if not exist
     if (!fs.existsSync(`${componentRoot}${path.sep}app-${componentName}-tabs`)) {
       fs.mkdirSync(`${componentRoot}${path.sep}app-${componentName}-tabs`);
-      fs.writeFile(
+      fs.writeFileSync(
         `${componentRoot}${path.sep}app-${componentName}-tabs${path.sep}app-${componentName}-tabs.tsx`,
         `import { Component, h } from '@stencil/core';
         @Component({
@@ -93,7 +93,7 @@ readdirp('_docs', settings)
           console.log(`app-${componentName}-demo.tsx created successfully`);
         }
       );
-      fs.writeFile(
+      fs.writeFileSync(
         `${componentRoot}${path.sep}app-${componentName}-demo${path.sep}app-${componentName}-demo.scss`, '',
         (err) => {
           if (err) throw err;
@@ -108,7 +108,7 @@ readdirp('_docs', settings)
     }
 
     // Create app-component-api.tsx from readme.html
-    fs.readFile(entry.fullPath, 'utf8', function (err, data) {
+    fs.readFileSync(entry.fullPath, 'utf8', function (err, data) {
       if (err) {
         return console.log(err);
       }
@@ -117,24 +117,24 @@ readdirp('_docs', settings)
       result = result.replace(/<!-- Auto Generated Below -->/g, '');
       result = result.replace(/<hr>/g, '<hr/>');
 
-      fs.writeFile(`${componentRoot}${path.sep}app-${componentName}-api${path.sep}${componentName}-api-page.tsx`, result, 'utf8', function (err) {
+      fs.writeFileSync(`${componentRoot}${path.sep}app-${componentName}-api${path.sep}${componentName}-api-page.tsx`, result, 'utf8', function (err) {
         if (err) return console.log(err);
         console.log(`app-${componentName}-api.tsx created successfully`);
       });
     });
 
     // Add component route to app-root.tsx
-    fs.readFile(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, function (err, data) {
+    fs.readFileSync(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, function (err, data) {
       if (err) throw err;
       let updatedRoot = data;
-      if (!updatedRoot.includes('app-${componentName}-tabs')) {
+      if (!updatedRoot.includes(`app-${componentName}-tabs`)) {
         updatedRoot = updatedRoot.replace('/* ROUTE GENERATION NEEDLE */', `{ path: '/components/${componentName}', component: 'app-${componentName}-tabs' },\r\n/* ROUTE GENERATION NEEDLE */`)
       }
       if (!updatedRoot.includes(`targetUrl="/components/${componentName}"`)) {
         const menuLabel = snakeToCamel(componentName.charAt(0).toUpperCase() + componentName.slice(1).toLowerCase()).replace('-', ' ');
         updatedRoot = updatedRoot.replace('{/* MENU GENERATION NEEDLE */}', `<materials-drawer-list-item label="${menuLabel}" targetUrl="/components/${componentName}" />\r\n{/* MENU GENERATION NEEDLE */}`)
       }
-      fs.writeFile(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, updatedRoot, 'utf8', function (err) {
+      fs.writeFileSync(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, updatedRoot, 'utf8', function (err) {
         if (err) return console.log(err);
         console.log(`${componentName} added to app-root.tsx`);
       });
