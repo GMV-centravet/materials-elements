@@ -142,8 +142,6 @@ readdirp('_docs', settings)
         }
       }`;
 
-      // result = result.replace(/{/g, '<hr/>');
-
       fs.writeFile(`${componentRoot}${path.sep}app-${componentName}-api${path.sep}app-${componentName}-api.tsx`, page, 'utf8', function (err) {
         if (err) {
           console.log(err);
@@ -161,7 +159,7 @@ readdirp('_docs', settings)
       data = data.replace('/* ROUTE GENERATION NEEDLE */', `{ path: '/components/${componentName}', component: 'app-${componentName}-tabs' },\r\n/* ROUTE GENERATION NEEDLE */`)
     }
     if (!data.includes(`targetUrl="/components/${componentName}"`)) {
-      const menuLabel = snakeToCamel(componentName.charAt(0).toUpperCase() + componentName.slice(1).toLowerCase()).replace('-', ' ');
+      const menuLabel = componentName.charAt(0).toUpperCase() + componentName.slice(1).toLowerCase().replace(/-/g, ' ');
       data = data.replace('{/* MENU GENERATION NEEDLE */}', `<materials-drawer-list-item label="${menuLabel}" targetUrl="/components/${componentName}" />\r\n{/* MENU GENERATION NEEDLE */}`)
     }
     fs.writeFileSync(`src${path.sep}app${path.sep}app-root${path.sep}app-root.tsx`, data, {
