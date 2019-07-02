@@ -156,7 +156,13 @@ readdirp('_docs', settings)
       encoding: 'utf8'
     });
     if (!data.includes(`app-${componentName}-tabs`)) {
-      data = data.replace('/* ROUTE GENERATION NEEDLE */', `{ path: '/components/${componentName}', component: 'app-${componentName}-tabs' },\r\n/* ROUTE GENERATION NEEDLE */`)
+      data = data.replace(
+        '/* ROUTE GENERATION NEEDLE */',
+        `{ path: '/components/${componentName}', component: 'app-${componentName}-tabs' },
+         { path: '/components/${componentName}/demo', component: 'app-${componentName}-tabs' },
+         { path: '/components/${componentName}/api', component: 'app-${componentName}-tabs' },
+         /* ROUTE GENERATION NEEDLE */`
+      );
     }
     if (!data.includes(`targetUrl="/components/${componentName}"`)) {
       const menuLabel = componentName.charAt(0).toUpperCase() + componentName.slice(1).toLowerCase().replace(/-/g, ' ');
