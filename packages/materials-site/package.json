@@ -11,17 +11,17 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build && npm run netlify:prepare",
+    "build": "npm run generate:apis && stencil build && npm run netlify:prepare",
     "download-readme-files": "node scripts/download-docs-from-github && cd docs/dist/src && cp -R --parents components/**/readme.md ../.. && cd ../.. && rm -rf dist",
     "clean": "rm -rf _docs && rm -rf docs/components/**",
     "generate:apis": "npm run clean && npm run download-readme-files && markdown-folder-to-html && node scripts/generate-api-pages",
-    "start": "stencil build --dev --watch --serve",
+    "start": "npm run generate:apis && stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watch",
     "netlify:prepare": "cp netlify/* www/"
   },
   "dependencies": {
-    "@gmvdev/materials": "0.0.4-ee6d7b552bbf7a01b283e972127f40e8c7fcc821.0",
+    "@gmvdev/materials": "0.0.4-64dd6a3ae86f9db7bdd3ba8052cd0e9fe304e63e.0",
     "@material/animation": "~1.0.0",
     "@material/base": "~1.0.0",
     "@material/button": "~2.1.1",
