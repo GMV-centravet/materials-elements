@@ -15,6 +15,9 @@ export namespace Components {
   interface AppButtonApi {}
   interface AppButtonDemo {}
   interface AppButtonTabs {}
+  interface AppCardActionApi {}
+  interface AppCardActionDemo {}
+  interface AppCardActionTabs {}
   interface AppCardApi {}
   interface AppCardContentApi {}
   interface AppCardContentDemo {}
@@ -65,6 +68,9 @@ export namespace Components {
   interface AppFormFieldApi {}
   interface AppFormFieldDemo {}
   interface AppFormFieldTabs {}
+  interface AppHeadlineApi {}
+  interface AppHeadlineDemo {}
+  interface AppHeadlineTabs {}
   interface AppHome {}
   interface AppIconApi {}
   interface AppIconButtonApi {}
@@ -107,6 +113,9 @@ export namespace Components {
   interface AppStepperApi {}
   interface AppStepperDemo {}
   interface AppStepperTabs {}
+  interface AppSubtitleApi {}
+  interface AppSubtitleDemo {}
+  interface AppSubtitleTabs {}
   interface AppSwitchApi {}
   interface AppSwitchDemo {}
   interface AppSwitchTabs {}
@@ -125,6 +134,9 @@ export namespace Components {
   interface AppTimepickerApi {}
   interface AppTimepickerDemo {}
   interface AppTimepickerTabs {}
+  interface AppTopAppBarActionApi {}
+  interface AppTopAppBarActionDemo {}
+  interface AppTopAppBarActionTabs {}
   interface AppTopAppBarApi {}
   interface AppTopAppBarDemo {}
   interface AppTopAppBarTabs {}
@@ -167,6 +179,24 @@ declare global {
   var HTMLAppButtonTabsElement: {
     prototype: HTMLAppButtonTabsElement;
     new (): HTMLAppButtonTabsElement;
+  };
+
+  interface HTMLAppCardActionApiElement extends Components.AppCardActionApi, HTMLStencilElement {}
+  var HTMLAppCardActionApiElement: {
+    prototype: HTMLAppCardActionApiElement;
+    new (): HTMLAppCardActionApiElement;
+  };
+
+  interface HTMLAppCardActionDemoElement extends Components.AppCardActionDemo, HTMLStencilElement {}
+  var HTMLAppCardActionDemoElement: {
+    prototype: HTMLAppCardActionDemoElement;
+    new (): HTMLAppCardActionDemoElement;
+  };
+
+  interface HTMLAppCardActionTabsElement extends Components.AppCardActionTabs, HTMLStencilElement {}
+  var HTMLAppCardActionTabsElement: {
+    prototype: HTMLAppCardActionTabsElement;
+    new (): HTMLAppCardActionTabsElement;
   };
 
   interface HTMLAppCardApiElement extends Components.AppCardApi, HTMLStencilElement {}
@@ -457,6 +487,24 @@ declare global {
     new (): HTMLAppFormFieldTabsElement;
   };
 
+  interface HTMLAppHeadlineApiElement extends Components.AppHeadlineApi, HTMLStencilElement {}
+  var HTMLAppHeadlineApiElement: {
+    prototype: HTMLAppHeadlineApiElement;
+    new (): HTMLAppHeadlineApiElement;
+  };
+
+  interface HTMLAppHeadlineDemoElement extends Components.AppHeadlineDemo, HTMLStencilElement {}
+  var HTMLAppHeadlineDemoElement: {
+    prototype: HTMLAppHeadlineDemoElement;
+    new (): HTMLAppHeadlineDemoElement;
+  };
+
+  interface HTMLAppHeadlineTabsElement extends Components.AppHeadlineTabs, HTMLStencilElement {}
+  var HTMLAppHeadlineTabsElement: {
+    prototype: HTMLAppHeadlineTabsElement;
+    new (): HTMLAppHeadlineTabsElement;
+  };
+
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
@@ -709,6 +757,24 @@ declare global {
     new (): HTMLAppStepperTabsElement;
   };
 
+  interface HTMLAppSubtitleApiElement extends Components.AppSubtitleApi, HTMLStencilElement {}
+  var HTMLAppSubtitleApiElement: {
+    prototype: HTMLAppSubtitleApiElement;
+    new (): HTMLAppSubtitleApiElement;
+  };
+
+  interface HTMLAppSubtitleDemoElement extends Components.AppSubtitleDemo, HTMLStencilElement {}
+  var HTMLAppSubtitleDemoElement: {
+    prototype: HTMLAppSubtitleDemoElement;
+    new (): HTMLAppSubtitleDemoElement;
+  };
+
+  interface HTMLAppSubtitleTabsElement extends Components.AppSubtitleTabs, HTMLStencilElement {}
+  var HTMLAppSubtitleTabsElement: {
+    prototype: HTMLAppSubtitleTabsElement;
+    new (): HTMLAppSubtitleTabsElement;
+  };
+
   interface HTMLAppSwitchApiElement extends Components.AppSwitchApi, HTMLStencilElement {}
   var HTMLAppSwitchApiElement: {
     prototype: HTMLAppSwitchApiElement;
@@ -817,6 +883,24 @@ declare global {
     new (): HTMLAppTimepickerTabsElement;
   };
 
+  interface HTMLAppTopAppBarActionApiElement extends Components.AppTopAppBarActionApi, HTMLStencilElement {}
+  var HTMLAppTopAppBarActionApiElement: {
+    prototype: HTMLAppTopAppBarActionApiElement;
+    new (): HTMLAppTopAppBarActionApiElement;
+  };
+
+  interface HTMLAppTopAppBarActionDemoElement extends Components.AppTopAppBarActionDemo, HTMLStencilElement {}
+  var HTMLAppTopAppBarActionDemoElement: {
+    prototype: HTMLAppTopAppBarActionDemoElement;
+    new (): HTMLAppTopAppBarActionDemoElement;
+  };
+
+  interface HTMLAppTopAppBarActionTabsElement extends Components.AppTopAppBarActionTabs, HTMLStencilElement {}
+  var HTMLAppTopAppBarActionTabsElement: {
+    prototype: HTMLAppTopAppBarActionTabsElement;
+    new (): HTMLAppTopAppBarActionTabsElement;
+  };
+
   interface HTMLAppTopAppBarApiElement extends Components.AppTopAppBarApi, HTMLStencilElement {}
   var HTMLAppTopAppBarApiElement: {
     prototype: HTMLAppTopAppBarApiElement;
@@ -841,6 +925,9 @@ declare global {
     'app-button-api': HTMLAppButtonApiElement;
     'app-button-demo': HTMLAppButtonDemoElement;
     'app-button-tabs': HTMLAppButtonTabsElement;
+    'app-card-action-api': HTMLAppCardActionApiElement;
+    'app-card-action-demo': HTMLAppCardActionDemoElement;
+    'app-card-action-tabs': HTMLAppCardActionTabsElement;
     'app-card-api': HTMLAppCardApiElement;
     'app-card-content-api': HTMLAppCardContentApiElement;
     'app-card-content-demo': HTMLAppCardContentDemoElement;
@@ -889,6 +976,9 @@ declare global {
     'app-form-field-api': HTMLAppFormFieldApiElement;
     'app-form-field-demo': HTMLAppFormFieldDemoElement;
     'app-form-field-tabs': HTMLAppFormFieldTabsElement;
+    'app-headline-api': HTMLAppHeadlineApiElement;
+    'app-headline-demo': HTMLAppHeadlineDemoElement;
+    'app-headline-tabs': HTMLAppHeadlineTabsElement;
     'app-home': HTMLAppHomeElement;
     'app-icon-api': HTMLAppIconApiElement;
     'app-icon-button-api': HTMLAppIconButtonApiElement;
@@ -931,6 +1021,9 @@ declare global {
     'app-stepper-api': HTMLAppStepperApiElement;
     'app-stepper-demo': HTMLAppStepperDemoElement;
     'app-stepper-tabs': HTMLAppStepperTabsElement;
+    'app-subtitle-api': HTMLAppSubtitleApiElement;
+    'app-subtitle-demo': HTMLAppSubtitleDemoElement;
+    'app-subtitle-tabs': HTMLAppSubtitleTabsElement;
     'app-switch-api': HTMLAppSwitchApiElement;
     'app-switch-demo': HTMLAppSwitchDemoElement;
     'app-switch-tabs': HTMLAppSwitchTabsElement;
@@ -949,6 +1042,9 @@ declare global {
     'app-timepicker-api': HTMLAppTimepickerApiElement;
     'app-timepicker-demo': HTMLAppTimepickerDemoElement;
     'app-timepicker-tabs': HTMLAppTimepickerTabsElement;
+    'app-top-app-bar-action-api': HTMLAppTopAppBarActionApiElement;
+    'app-top-app-bar-action-demo': HTMLAppTopAppBarActionDemoElement;
+    'app-top-app-bar-action-tabs': HTMLAppTopAppBarActionTabsElement;
     'app-top-app-bar-api': HTMLAppTopAppBarApiElement;
     'app-top-app-bar-demo': HTMLAppTopAppBarDemoElement;
     'app-top-app-bar-tabs': HTMLAppTopAppBarTabsElement;
@@ -962,6 +1058,9 @@ declare namespace LocalJSX {
   interface AppButtonApi extends JSXBase.HTMLAttributes<HTMLAppButtonApiElement> {}
   interface AppButtonDemo extends JSXBase.HTMLAttributes<HTMLAppButtonDemoElement> {}
   interface AppButtonTabs extends JSXBase.HTMLAttributes<HTMLAppButtonTabsElement> {}
+  interface AppCardActionApi extends JSXBase.HTMLAttributes<HTMLAppCardActionApiElement> {}
+  interface AppCardActionDemo extends JSXBase.HTMLAttributes<HTMLAppCardActionDemoElement> {}
+  interface AppCardActionTabs extends JSXBase.HTMLAttributes<HTMLAppCardActionTabsElement> {}
   interface AppCardApi extends JSXBase.HTMLAttributes<HTMLAppCardApiElement> {}
   interface AppCardContentApi extends JSXBase.HTMLAttributes<HTMLAppCardContentApiElement> {}
   interface AppCardContentDemo extends JSXBase.HTMLAttributes<HTMLAppCardContentDemoElement> {}
@@ -1012,6 +1111,9 @@ declare namespace LocalJSX {
   interface AppFormFieldApi extends JSXBase.HTMLAttributes<HTMLAppFormFieldApiElement> {}
   interface AppFormFieldDemo extends JSXBase.HTMLAttributes<HTMLAppFormFieldDemoElement> {}
   interface AppFormFieldTabs extends JSXBase.HTMLAttributes<HTMLAppFormFieldTabsElement> {}
+  interface AppHeadlineApi extends JSXBase.HTMLAttributes<HTMLAppHeadlineApiElement> {}
+  interface AppHeadlineDemo extends JSXBase.HTMLAttributes<HTMLAppHeadlineDemoElement> {}
+  interface AppHeadlineTabs extends JSXBase.HTMLAttributes<HTMLAppHeadlineTabsElement> {}
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
   interface AppIconApi extends JSXBase.HTMLAttributes<HTMLAppIconApiElement> {}
   interface AppIconButtonApi extends JSXBase.HTMLAttributes<HTMLAppIconButtonApiElement> {}
@@ -1054,6 +1156,9 @@ declare namespace LocalJSX {
   interface AppStepperApi extends JSXBase.HTMLAttributes<HTMLAppStepperApiElement> {}
   interface AppStepperDemo extends JSXBase.HTMLAttributes<HTMLAppStepperDemoElement> {}
   interface AppStepperTabs extends JSXBase.HTMLAttributes<HTMLAppStepperTabsElement> {}
+  interface AppSubtitleApi extends JSXBase.HTMLAttributes<HTMLAppSubtitleApiElement> {}
+  interface AppSubtitleDemo extends JSXBase.HTMLAttributes<HTMLAppSubtitleDemoElement> {}
+  interface AppSubtitleTabs extends JSXBase.HTMLAttributes<HTMLAppSubtitleTabsElement> {}
   interface AppSwitchApi extends JSXBase.HTMLAttributes<HTMLAppSwitchApiElement> {}
   interface AppSwitchDemo extends JSXBase.HTMLAttributes<HTMLAppSwitchDemoElement> {}
   interface AppSwitchTabs extends JSXBase.HTMLAttributes<HTMLAppSwitchTabsElement> {}
@@ -1072,6 +1177,9 @@ declare namespace LocalJSX {
   interface AppTimepickerApi extends JSXBase.HTMLAttributes<HTMLAppTimepickerApiElement> {}
   interface AppTimepickerDemo extends JSXBase.HTMLAttributes<HTMLAppTimepickerDemoElement> {}
   interface AppTimepickerTabs extends JSXBase.HTMLAttributes<HTMLAppTimepickerTabsElement> {}
+  interface AppTopAppBarActionApi extends JSXBase.HTMLAttributes<HTMLAppTopAppBarActionApiElement> {}
+  interface AppTopAppBarActionDemo extends JSXBase.HTMLAttributes<HTMLAppTopAppBarActionDemoElement> {}
+  interface AppTopAppBarActionTabs extends JSXBase.HTMLAttributes<HTMLAppTopAppBarActionTabsElement> {}
   interface AppTopAppBarApi extends JSXBase.HTMLAttributes<HTMLAppTopAppBarApiElement> {}
   interface AppTopAppBarDemo extends JSXBase.HTMLAttributes<HTMLAppTopAppBarDemoElement> {}
   interface AppTopAppBarTabs extends JSXBase.HTMLAttributes<HTMLAppTopAppBarTabsElement> {}
@@ -1083,6 +1191,9 @@ declare namespace LocalJSX {
     'app-button-api': AppButtonApi;
     'app-button-demo': AppButtonDemo;
     'app-button-tabs': AppButtonTabs;
+    'app-card-action-api': AppCardActionApi;
+    'app-card-action-demo': AppCardActionDemo;
+    'app-card-action-tabs': AppCardActionTabs;
     'app-card-api': AppCardApi;
     'app-card-content-api': AppCardContentApi;
     'app-card-content-demo': AppCardContentDemo;
@@ -1131,6 +1242,9 @@ declare namespace LocalJSX {
     'app-form-field-api': AppFormFieldApi;
     'app-form-field-demo': AppFormFieldDemo;
     'app-form-field-tabs': AppFormFieldTabs;
+    'app-headline-api': AppHeadlineApi;
+    'app-headline-demo': AppHeadlineDemo;
+    'app-headline-tabs': AppHeadlineTabs;
     'app-home': AppHome;
     'app-icon-api': AppIconApi;
     'app-icon-button-api': AppIconButtonApi;
@@ -1173,6 +1287,9 @@ declare namespace LocalJSX {
     'app-stepper-api': AppStepperApi;
     'app-stepper-demo': AppStepperDemo;
     'app-stepper-tabs': AppStepperTabs;
+    'app-subtitle-api': AppSubtitleApi;
+    'app-subtitle-demo': AppSubtitleDemo;
+    'app-subtitle-tabs': AppSubtitleTabs;
     'app-switch-api': AppSwitchApi;
     'app-switch-demo': AppSwitchDemo;
     'app-switch-tabs': AppSwitchTabs;
@@ -1191,6 +1308,9 @@ declare namespace LocalJSX {
     'app-timepicker-api': AppTimepickerApi;
     'app-timepicker-demo': AppTimepickerDemo;
     'app-timepicker-tabs': AppTimepickerTabs;
+    'app-top-app-bar-action-api': AppTopAppBarActionApi;
+    'app-top-app-bar-action-demo': AppTopAppBarActionDemo;
+    'app-top-app-bar-action-tabs': AppTopAppBarActionTabs;
     'app-top-app-bar-api': AppTopAppBarApi;
     'app-top-app-bar-demo': AppTopAppBarDemo;
     'app-top-app-bar-tabs': AppTopAppBarTabs;

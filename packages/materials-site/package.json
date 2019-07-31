@@ -21,7 +21,7 @@
     "netlify:prepare": "cp netlify/* www/"
   },
   "dependencies": {
-    "@gmvdev/materials": "0.0.4-64dd6a3ae86f9db7bdd3ba8052cd0e9fe304e63e.0",
+    "@gmvdev/materials": "1.1.0",
     "@material/animation": "~1.0.0",
     "@material/base": "~1.0.0",
     "@material/button": "~2.1.1",

@@ -127,6 +127,18 @@ export class AppRoot {
       { path: '/components/multiple-select', component: 'app-multiple-select-tabs' },
       { path: '/components/multiple-select/demo', component: 'app-multiple-select-tabs' },
       { path: '/components/multiple-select/api', component: 'app-multiple-select-tabs' },
+      { path: '/components/top-app-bar-action', component: 'app-top-app-bar-action-tabs' },
+      { path: '/components/top-app-bar-action/demo', component: 'app-top-app-bar-action-tabs' },
+      { path: '/components/top-app-bar-action/api', component: 'app-top-app-bar-action-tabs' },
+      { path: '/components/subtitle', component: 'app-subtitle-tabs' },
+      { path: '/components/subtitle/demo', component: 'app-subtitle-tabs' },
+      { path: '/components/subtitle/api', component: 'app-subtitle-tabs' },
+      { path: '/components/headline', component: 'app-headline-tabs' },
+      { path: '/components/headline/demo', component: 'app-headline-tabs' },
+      { path: '/components/headline/api', component: 'app-headline-tabs' },
+      { path: '/components/card-action', component: 'app-card-action-tabs' },
+      { path: '/components/card-action/demo', component: 'app-card-action-tabs' },
+      { path: '/components/card-action/api', component: 'app-card-action-tabs' },
       /* ROUTE GENERATION NEEDLE */
     ]);
   }
@@ -177,6 +189,10 @@ export class AppRoot {
         <materials-drawer-list-item label="Time field" targetUrl="/components/time-field" />
         <materials-drawer-list-item label="Timepicker" targetUrl="/components/timepicker" />
         <materials-drawer-list-item label="Top app bar" targetUrl="/components/top-app-bar" />
+        <materials-drawer-list-item label="Top app bar action" targetUrl="/components/top-app-bar-action" />
+        <materials-drawer-list-item label="Subtitle" targetUrl="/components/subtitle" />
+        <materials-drawer-list-item label="Headline" targetUrl="/components/headline" />
+        <materials-drawer-list-item label="Card action" targetUrl="/components/card-action" />
         {/* MENU GENERATION NEEDLE */}
         <div id="outlet" slot="main" />
       </materials-drawer-with-top-app-bar>
