@@ -27,7 +27,6 @@ export namespace Components {
   interface AppCheckboxApi {}
   interface AppCheckboxDemo {}
   interface AppCheckboxTabs {}
-  interface AppChipDemo {}
   interface AppChipsApi {}
   interface AppChipsDemo {}
   interface AppChipsTabs {}
@@ -251,12 +250,6 @@ declare global {
   var HTMLAppCheckboxTabsElement: {
     prototype: HTMLAppCheckboxTabsElement;
     new (): HTMLAppCheckboxTabsElement;
-  };
-
-  interface HTMLAppChipDemoElement extends Components.AppChipDemo, HTMLStencilElement {}
-  var HTMLAppChipDemoElement: {
-    prototype: HTMLAppChipDemoElement;
-    new (): HTMLAppChipDemoElement;
   };
 
   interface HTMLAppChipsApiElement extends Components.AppChipsApi, HTMLStencilElement {}
@@ -937,7 +930,6 @@ declare global {
     'app-checkbox-api': HTMLAppCheckboxApiElement;
     'app-checkbox-demo': HTMLAppCheckboxDemoElement;
     'app-checkbox-tabs': HTMLAppCheckboxTabsElement;
-    'app-chip-demo': HTMLAppChipDemoElement;
     'app-chips-api': HTMLAppChipsApiElement;
     'app-chips-demo': HTMLAppChipsDemoElement;
     'app-chips-tabs': HTMLAppChipsTabsElement;
@@ -1070,7 +1062,6 @@ declare namespace LocalJSX {
   interface AppCheckboxApi extends JSXBase.HTMLAttributes<HTMLAppCheckboxApiElement> {}
   interface AppCheckboxDemo extends JSXBase.HTMLAttributes<HTMLAppCheckboxDemoElement> {}
   interface AppCheckboxTabs extends JSXBase.HTMLAttributes<HTMLAppCheckboxTabsElement> {}
-  interface AppChipDemo extends JSXBase.HTMLAttributes<HTMLAppChipDemoElement> {}
   interface AppChipsApi extends JSXBase.HTMLAttributes<HTMLAppChipsApiElement> {}
   interface AppChipsDemo extends JSXBase.HTMLAttributes<HTMLAppChipsDemoElement> {}
   interface AppChipsTabs extends JSXBase.HTMLAttributes<HTMLAppChipsTabsElement> {}
@@ -1203,7 +1194,6 @@ declare namespace LocalJSX {
     'app-checkbox-api': AppCheckboxApi;
     'app-checkbox-demo': AppCheckboxDemo;
     'app-checkbox-tabs': AppCheckboxTabs;
-    'app-chip-demo': AppChipDemo;
     'app-chips-api': AppChipsApi;
     'app-chips-demo': AppChipsDemo;
     'app-chips-tabs': AppChipsTabs;

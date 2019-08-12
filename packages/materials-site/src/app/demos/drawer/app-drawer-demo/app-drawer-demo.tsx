@@ -8,7 +8,7 @@ import { Component, h, Host } from '@stencil/core';
           render() {
             return (
               <Host>
-                TODO: Add drawer demos
+                
               </Host>
             );
           }

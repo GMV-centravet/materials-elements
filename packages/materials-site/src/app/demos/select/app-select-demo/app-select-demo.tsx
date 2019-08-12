@@ -17,14 +17,6 @@ export class AppSelectDemo {
             options={simpleSelectOptions}/>`}
           </code>
         </app-demo-code-block>
-        <app-demo-code-block blockTitle="Multiple select">
-          <materials-multiple-select slot="demo" width="100%" label="Multiple select" dialogTitle="Multiple select"
-            options={simpleSelectOptions}/>
-          <code slot="code">
-            {`<materials-multiple-select slot="demo" width="100%" label="Multiple select" dialogTitle="Multiple select"
-            options={simpleSelectOptions}/>`}
-          </code>
-        </app-demo-code-block>
       </Host>
     );
   }

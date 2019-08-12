@@ -8,7 +8,7 @@ export class AppAutocompleteDemo {
   
   render() {
     
-    const autocompleteCb = (search: string) => 
+    const autocompleteCb = (search: string): Promise<Map<string, string>> => 
     new Promise((resolve, _) => {
       const start = new Map().set('1', 'Soufiane').set('2', 'Hervé')
       .set('3', 'Joackim').set('4', 'Amandine').set('5', 'Aline');
@@ -32,7 +32,7 @@ export class AppAutocompleteDemo {
     return (
       <Host>
       <app-demo-code-block blockTitle="Autocomplete">
-      <materials-autocomplete autocomplete={autocompleteCb}></materials-autocomplete>
+      <materials-autocomplete slot="demo" autocomplete={autocompleteCb}></materials-autocomplete>
       <code slot="code">
       {
         `<script>

@@ -139,7 +139,10 @@ export class AppRoot {
       { path: '/components/card-action', component: 'app-card-action-tabs' },
       { path: '/components/card-action/demo', component: 'app-card-action-tabs' },
       { path: '/components/card-action/api', component: 'app-card-action-tabs' },
-      /* ROUTE GENERATION NEEDLE */
+      { path: '/components/_docs', component: 'app-_docs-tabs' },
+         { path: '/components/_docs/demo', component: 'app-_docs-tabs' },
+         { path: '/components/_docs/api', component: 'app-_docs-tabs' },
+         /* ROUTE GENERATION NEEDLE */
     ]);
   }
 
@@ -193,7 +196,8 @@ export class AppRoot {
         <materials-drawer-list-item label="Subtitle" targetUrl="/components/subtitle" />
         <materials-drawer-list-item label="Headline" targetUrl="/components/headline" />
         <materials-drawer-list-item label="Card action" targetUrl="/components/card-action" />
-        {/* MENU GENERATION NEEDLE */}
+        <materials-drawer-list-item label="_docs" targetUrl="/components/_docs" />
+{/* MENU GENERATION NEEDLE */}
         <div id="outlet" slot="main" />
       </materials-drawer-with-top-app-bar>
     );
