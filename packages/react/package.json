@@ -1,0 +1,24 @@
+{
+  "name": "@materials/react",
+  "version": "0.0.0",
+  "description": "React wrapper for @materials/core",
+  "keywords": [
+    "materials",
+    "material",
+    "web-components"
+  ],
+  "author": "\"\"Joackim Labour\"\" <\"\"misterjojo@gmail.com\"\">",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/react.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
