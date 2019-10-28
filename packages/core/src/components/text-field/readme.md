@@ -7,28 +7,30 @@
 
 ## Properties
 
-| Property           | Attribute           | Description                                          | Type                    | Default     |
-| ------------------ | ------------------- | ---------------------------------------------------- | ----------------------- | ----------- |
-| `customValidation` | --                  |                                                      | `() => Promise<string>` | `undefined` |
-| `dense`            | `dense`             |                                                      | `boolean`               | `undefined` |
-| `disabled`         | `disabled`          |                                                      | `boolean`               | `undefined` |
-| `focused`          | `focused`           |                                                      | `boolean`               | `undefined` |
-| `fullwidth`        | `fullwidth`         |                                                      | `boolean`               | `undefined` |
-| `helperText`       | `helper-text`       |                                                      | `string`                | `undefined` |
-| `hideNativeClear`  | `hide-native-clear` | Hide clear button (webkit + Edge, Moz not supported) | `boolean`               | `false`     |
-| `label`            | `label`             |                                                      | `string`                | `undefined` |
-| `leadingIcon`      | `leading-icon`      |                                                      | `string`                | `undefined` |
-| `name`             | `name`              |                                                      | `string`                | `undefined` |
-| `outlined`         | `outlined`          |                                                      | `boolean`               | `undefined` |
-| `overflow`         | `overflow`          |                                                      | `boolean`               | `undefined` |
-| `pattern`          | `pattern`           |                                                      | `string`                | `undefined` |
-| `persistent`       | `persistent`        |                                                      | `boolean`               | `undefined` |
-| `readonly`         | `readonly`          |                                                      | `boolean`               | `undefined` |
-| `required`         | `required`          |                                                      | `boolean`               | `undefined` |
-| `trailingIcon`     | `trailing-icon`     |                                                      | `string`                | `undefined` |
-| `type`             | `type`              |                                                      | `string`                | `'text'`    |
-| `value`            | `value`             |                                                      | `any`                   | `undefined` |
-| `width`            | `width`             |                                                      | `number`                | `undefined` |
+| Property            | Attribute             | Description                                          | Type                    | Default     |
+| ------------------- | --------------------- | ---------------------------------------------------- | ----------------------- | ----------- |
+| `customValidation`  | --                    |                                                      | `() => Promise<string>` | `undefined` |
+| `dense`             | `dense`               |                                                      | `boolean`               | `undefined` |
+| `disabled`          | `disabled`            |                                                      | `boolean`               | `undefined` |
+| `focused`           | `focused`             |                                                      | `boolean`               | `undefined` |
+| `fullwidth`         | `fullwidth`           |                                                      | `boolean`               | `undefined` |
+| `helperText`        | `helper-text`         |                                                      | `string`                | `undefined` |
+| `hideNativeClear`   | `hide-native-clear`   | Hide clear button (webkit + Edge, Moz not supported) | `boolean`               | `false`     |
+| `label`             | `label`               |                                                      | `string`                | `undefined` |
+| `leadingIcon`       | `leading-icon`        |                                                      | `string`                | `undefined` |
+| `leadingIconTitle`  | `leading-icon-title`  | Add a title to the leading icon                      | `string`                | `undefined` |
+| `name`              | `name`                |                                                      | `string`                | `undefined` |
+| `outlined`          | `outlined`            |                                                      | `boolean`               | `undefined` |
+| `overflow`          | `overflow`            |                                                      | `boolean`               | `undefined` |
+| `pattern`           | `pattern`             |                                                      | `string`                | `undefined` |
+| `persistent`        | `persistent`          |                                                      | `boolean`               | `undefined` |
+| `readonly`          | `readonly`            |                                                      | `boolean`               | `undefined` |
+| `required`          | `required`            |                                                      | `boolean`               | `undefined` |
+| `trailingIcon`      | `trailing-icon`       |                                                      | `string`                | `undefined` |
+| `trailingIconTitle` | `trailing-icon-title` | Add a title to the trailing icon                     | `string`                | `undefined` |
+| `type`              | `type`                |                                                      | `string`                | `'text'`    |
+| `value`             | `value`               |                                                      | `any`                   | `undefined` |
+| `width`             | `width`               |                                                      | `number`                | `undefined` |
 
 
 ## Events
@@ -68,10 +70,10 @@ Type: `Promise<boolean>`
 
 ### Used by
 
- - [materials-autocomplete](../autocomplete)
- - [materials-date-field](../date-field)
- - [materials-multiple-select](../multiple-select)
- - [materials-time-field](../time-field)
+ - [materials-autocomplete](..\autocomplete)
+ - [materials-date-field](..\date-field)
+ - [materials-multiple-select](..\multiple-select)
+ - [materials-time-field](..\time-field)
 
 ### Graph
 ```mermaid

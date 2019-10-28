@@ -33,10 +33,10 @@ Material Design guidelines: https://material.io/design/components/buttons.html
 
 ### Used by
 
- - [materials-datatable-footer](../datatable/datatable-footer)
- - [materials-datepicker](../datepicker)
- - [materials-dropdown](../dropdown)
- - [materials-step](../stepper)
+ - [materials-datatable-footer](..\datatable\datatable-footer)
+ - [materials-datepicker](..\datepicker)
+ - [materials-dropdown](..\dropdown)
+ - [materials-step](..\stepper)
 
 ### Graph
 ```mermaid

@@ -70,7 +70,7 @@ export const config: Config = {
     },
     angularOutputTarget({
       componentCorePackage: '@materials/core',
-      directivesProxyFile: 'angular/src/directives/proxies.ts',
+      directivesProxyFile: '../angular/src/directives/proxies.ts',
       valueAccessorConfigs: angularValueAccessorBindings,
     }),
     reactOutputTarget({

@@ -64,7 +64,7 @@ Type: `Promise<void>`
 
 ### `show() => Promise<void>`
 
-
+<span style="color:red">**[DEPRECATED]**</span> since 1.1.0 : use toggle() insteadOpen/Close dialog.<br/><br/>
 
 #### Returns
 
@@ -87,13 +87,13 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [materials-alert-controller](../alert-controller)
- - [materials-dialog-controller](../dialog-controller)
- - [materials-multiple-select](../multiple-select)
+ - [materials-alert-controller](..\alert-controller)
+ - [materials-dialog-controller](..\dialog-controller)
+ - [materials-multiple-select](..\multiple-select)
 
 ### Depends on
 
-- [materials-icon-button](../icon-button)
+- [materials-icon-button](..\icon-button)
 
 ### Graph
 ```mermaid

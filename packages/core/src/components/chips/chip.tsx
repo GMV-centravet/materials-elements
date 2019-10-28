@@ -46,6 +46,7 @@ export class Chip {
       <Host class="mdc-chip-set">
         <div class={this.getClasses()} tabindex="0">
           <div class="mdc-chip__text">
+            test :
             <slot />
           </div>
         </div>

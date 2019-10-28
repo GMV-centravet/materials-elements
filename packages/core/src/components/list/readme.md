@@ -7,18 +7,20 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                              | Type                  | Default     |
-| -------- | --------- | ------------------------------------------------------------------------ | --------------------- | ----------- |
-| `dense`  | `dense`   | Optional, styles the density of the list, making it appear more compact. | `boolean`             | `false`     |
-| `size`   | `size`    |                                                                          | `"medium" \| "small"` | `undefined` |
+| Property     | Attribute    | Description                                                                 | Type                  | Default     |
+| ------------ | ------------ | --------------------------------------------------------------------------- | --------------------- | ----------- |
+| `dense`      | `dense`      | Optional, styles the density of the list, making it appear more compact.    | `boolean`             | `false`     |
+| `multiple`   | `multiple`   | Optional, if the list is selectable it can be a multiple selection          | `boolean`             | `false`     |
+| `selectable` | `selectable` | Optional, make a list selectable                                            | `boolean`             | `false`     |
+| `size`       | `size`       | <span style="color:red">**[DEPRECATED]**</span> use dense instead<br/><br/> | `"medium" \| "small"` | `undefined` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [materials-autocomplete](../autocomplete)
- - [materials-multiple-select](../multiple-select)
+ - [materials-autocomplete](..\autocomplete)
+ - [materials-multiple-select](..\multiple-select)
 
 ### Graph
 ```mermaid

@@ -7,22 +7,22 @@
 
 ## Properties
 
-| Property           | Attribute       | Description | Type                                        | Default     |
-| ------------------ | --------------- | ----------- | ------------------------------------------- | ----------- |
-| `box`              | `box`           |             | `boolean`                                   | `undefined` |
-| `customValidation` | --              |             | `() => Promise<string>`                     | `undefined` |
-| `defaultEmpty`     | `default-empty` |             | `boolean`                                   | `undefined` |
-| `dense`            | `dense`         |             | `boolean`                                   | `undefined` |
-| `disabled`         | `disabled`      |             | `boolean`                                   | `undefined` |
-| `helperText`       | `helper-text`   |             | `string`                                    | `undefined` |
-| `label`            | `label`         |             | `string`                                    | `undefined` |
-| `leadingIcon`      | `leading-icon`  |             | `string`                                    | `undefined` |
-| `name`             | `name`          |             | `string`                                    | `undefined` |
-| `options`          | --              |             | `Map<string \| number \| string[], string>` | `undefined` |
-| `outlined`         | `outlined`      |             | `boolean`                                   | `undefined` |
-| `required`         | `required`      |             | `boolean`                                   | `undefined` |
-| `value`            | `value`         |             | `any`                                       | `undefined` |
-| `width`            | `width`         |             | `string`                                    | `undefined` |
+| Property           | Attribute       | Description | Type                            | Default     |
+| ------------------ | --------------- | ----------- | ------------------------------- | ----------- |
+| `box`              | `box`           |             | `boolean`                       | `undefined` |
+| `customValidation` | --              |             | `() => Promise<string>`         | `undefined` |
+| `defaultEmpty`     | `default-empty` |             | `boolean`                       | `undefined` |
+| `dense`            | `dense`         |             | `boolean`                       | `undefined` |
+| `disabled`         | `disabled`      |             | `boolean`                       | `undefined` |
+| `helperText`       | `helper-text`   |             | `string`                        | `undefined` |
+| `label`            | `label`         |             | `string`                        | `undefined` |
+| `leadingIcon`      | `leading-icon`  |             | `string`                        | `undefined` |
+| `name`             | `name`          |             | `string`                        | `undefined` |
+| `options`          | --              |             | `Map<string \| number, string>` | `undefined` |
+| `outlined`         | `outlined`      |             | `boolean`                       | `undefined` |
+| `required`         | `required`      |             | `boolean`                       | `undefined` |
+| `value`            | `value`         |             | `any`                           | `undefined` |
+| `width`            | `width`         |             | `string`                        | `undefined` |
 
 
 ## Events

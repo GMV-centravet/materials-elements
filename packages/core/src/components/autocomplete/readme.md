@@ -28,9 +28,9 @@
 
 ### Depends on
 
-- [materials-text-field](../text-field)
-- [materials-list](../list)
-- [materials-list-item](../list-item)
+- [materials-text-field](..\text-field)
+- [materials-list](..\list)
+- [materials-list-item](..\list-item)
 
 ### Graph
 ```mermaid
