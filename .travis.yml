@@ -6,6 +6,9 @@ install:
   - lerna bootstrap
 script:
   - lerna run build
+after_success:
+  - test $TRAVIS_BRANCH = "master" && git checkout master
+
 deploy:
   - provider: script
     script: npx lerna publish --yes
