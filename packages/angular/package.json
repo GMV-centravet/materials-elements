@@ -1,6 +1,6 @@
 {
   "name": "@materials-ui/angular",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Angular wrapper for @materials/core web components",
   "license": "MIT",
   "repository": {
