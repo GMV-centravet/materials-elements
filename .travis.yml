@@ -3,7 +3,7 @@ node_js:
   - "10"
 install:
   - npm install -g lerna
-  - npm run bootstrap
+  - lerna bootstrap
 script:
   - lerna run build
 deploy:

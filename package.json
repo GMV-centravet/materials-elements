@@ -5,7 +5,7 @@
     "lerna": "^3.16.4"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "publish": "lerna publish"
   }
 }
