@@ -1,6 +1,6 @@
 {
   "name": "@materials-ui/angular",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Angular wrapper for @materials-ui/core web components",
   "license": "MIT",
   "repository": {
@@ -30,7 +30,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@materials-ui/core": "^0.0.8",
+    "@materials-ui/core": "^0.0.9",
     "tslib": "^1.10.0"
   },
   "peerDependencies": {
