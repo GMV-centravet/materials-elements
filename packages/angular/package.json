@@ -30,7 +30,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@materials-ui/core": "^0.0.6",
+    "@materials-ui/core": "^0.0.8",
     "tslib": "^1.10.0"
   },
   "peerDependencies": {
