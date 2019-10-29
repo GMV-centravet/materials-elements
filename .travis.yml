@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - lts/*
+  - "10"
 install:
   - npm install -g lerna
   - npm run bootstrap
 script:
-  - lerna run test
   - lerna run build
 deploy:
   - provider: script
