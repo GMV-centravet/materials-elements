@@ -27,7 +27,7 @@ function proxyOutputs(instance: any, el: any, events: string[]) {
   events.forEach(eventName => instance[eventName] = fromEvent(el, eventName));
 }
 
-import { Components } from '@materials/core'
+import { Components } from '@materials-ui/core'
 
 export declare interface MaterialsAlertController extends Components.MaterialsAlertController {}
 @Component({ selector: 'materials-alert-controller', changeDetection: 0, template: '<ng-content></ng-content>' })

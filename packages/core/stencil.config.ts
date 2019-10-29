@@ -56,7 +56,7 @@ export const config: Config = {
       esmLoaderPath: '../loader'
     },
     angularOutputTarget({
-      componentCorePackage: '@materials/core',
+      componentCorePackage: '@materials-ui/core',
       directivesProxyFile: '../angular/src/directives/proxies.ts',
       valueAccessorConfigs: angularValueAccessorBindings,
     }),
