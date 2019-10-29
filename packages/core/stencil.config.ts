@@ -1,6 +1,5 @@
 import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
 import { Config } from '@stencil/core';
-import { reactOutputTarget } from "@stencil/react-output-target";
 import { sass } from '@stencil/sass';
 
 
@@ -60,11 +59,6 @@ export const config: Config = {
       componentCorePackage: '@materials/core',
       directivesProxyFile: '../angular/src/directives/proxies.ts',
       valueAccessorConfigs: angularValueAccessorBindings,
-    }),
-    reactOutputTarget({
-      componentCorePackage: '@materials/core',
-      proxiesFile: '../react/src/components.ts',
-      loaderDir: 'lib/loader'
     }),
     {
       type: 'www',

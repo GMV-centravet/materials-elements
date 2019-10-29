@@ -56,7 +56,6 @@
     "@stencil/core": "1.2.4",
     "@stencil/sass": "1.0.1",
     "@stencil/angular-output-target": "0.0.1",
-    "@stencil/react-output-target": "0.0.1",
     "@types/jest": "24.0.13",
     "@types/puppeteer": "1.12.2",
     "jest": "24.8.0",
