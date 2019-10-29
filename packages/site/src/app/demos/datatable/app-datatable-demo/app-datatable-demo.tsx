@@ -1,6 +1,4 @@
-import '@gmvdev/materials';
-
-import { Sort } from '@gmvdev/materials/dist/types/components/datatable/sort';
+import { Sort } from '@materials/core/dist/types/components/datatable/sort';
 import { Component, Element, h, State } from '@stencil/core';
 
 // import 'materials-snackbar-controller';

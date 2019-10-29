@@ -1,1 +1,1 @@
-import '@gmvdev/materials';
+import '@materials/core';
