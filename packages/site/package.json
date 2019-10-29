@@ -51,9 +51,9 @@
     "@material/theme": "~1.1.0",
     "@material/top-app-bar": "^2.1.1",
     "@material/typography": "~1.0.0",
+    "@materials/core": "^0.0.1",
     "@vaadin/router": "^1.2.0",
-    "material-design-icons": "^3.0.1",
-    "@materials/core": "0.0.1"
+    "material-design-icons": "^3.0.1"
   },
   "devDependencies": {
     "@stencil/core": "^1.2.4",
