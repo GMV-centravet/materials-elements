@@ -11,7 +11,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run generate:apis && stencil build && npm run netlify:prepare",
+    "build": "stencil build && npm run netlify:prepare",
     "download-readme-files": "node scripts/download-docs-from-github && cd docs/dist/src && rsync -R components/**/readme.md ../.. && cd ../.. && rm -rf dist",
     "clean": "rm -rf _docs && rm -rf docs/components/**",
     "generate:apis": "npm run clean && npm run download-readme-files && markdown-folder-to-html && node scripts/generate-api-pages",
@@ -52,10 +52,10 @@
     "@material/top-app-bar": "^2.1.1",
     "@material/typography": "~1.0.0",
     "@vaadin/router": "^1.2.0",
-    "material-design-icons": "^3.0.1"
+    "material-design-icons": "^3.0.1",
+    "@materials/core": "0.0.1"
   },
   "devDependencies": {
-    "@materials/core": "^1.1.1-3d456dfc77521cb42ee433e9cd34fa85e468ba8c.0",
     "@stencil/core": "^1.2.4",
     "@stencil/sass": "^1.0.1",
     "@types/jest": "24.0.13",

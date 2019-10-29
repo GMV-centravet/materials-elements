@@ -1,24 +1,75 @@
 {
   "name": "@materials/angular",
-  "version": "0.0.0",
-  "description": "Angular wrapper for @materials/core",
-  "keywords": [
-    "materials",
-    "material",
-    "web-components"
-  ],
-  "author": "\"\"Joackim Labour\"\" <\"\"misterjojo@gmail.com\"\">",
-  "homepage": "",
+  "version": "0.0.1",
+  "description": "Angular wrapper for @materials/core web components",
   "license": "MIT",
-  "main": "lib/angular.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GMV-centravet/materials.git"
   },
-  "files": [
-    "lib"
-  ],
+  "bugs": {
+    "url": "https://github.com/GMV-centravet/materials/issues"
+  },
+  "homepage": "https://github.com/GMV-centravet/materials",
+  "author": "GMV-Centravet",
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "dist/fesm5.js",
+  "main": "dist/fesm5.cjs.js",
+  "types": "dist/core.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@materials/core": "0.0.1",
+    "tslib": "^1.9.3"
+  },
+  "peerDependencies": {
+    "@angular-devkit/core": "7.2.1 - 8",
+    "@angular-devkit/schematics": "7.2.1 - 8",
+    "@angular/core": "7.2.1 - 8",
+    "@angular/common": "7.2.1 - 8",
+    "@angular/compiler": "7.2.1 - 8",
+    "@angular/compiler-cli": "7.2.1 - 8",
+    "@angular/platform-browser": "7.2.1 - 8",
+    "@angular/platform-browser-dynamic": "7.2.1 - 8",
+    "rxjs": ">=6.2.0",
+    "zone.js": ">=0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/core": "^8.2.12",
+    "@angular-devkit/schematics": "^8.2.12",
+    "@angular-devkit/build-angular": "~0.803.15",
+    "@angular-devkit/build-ng-packagr": "~0.803.15",
+    "@angular/cli": "~8.3.15",
+    "@angular/compiler-cli": "~8.2.12",
+    "@angular/language-service": "~8.2.12",
+    "@types/node": "~8.9.4",
+    "@types/jasmine": "~3.3.8",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "^5.0.0",
+    "jasmine-core": "~3.4.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.1.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^5.4.0",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tsickle": "^0.37.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.5.3"
+  },
+  "schematics": "./dist/schematics/collection.json"
 }

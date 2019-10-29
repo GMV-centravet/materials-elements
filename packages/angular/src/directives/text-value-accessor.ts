@@ -8,8 +8,6 @@ import { ValueAccessor } from './value-accessor';
   selector: 'materials-autocomplete, materials-date-field, materials-time-field, materials-text-field:not([type=number]), materials-textarea',
   host: {
     '(change)': 'handleChangeEvent($event.target.value)'
-    '(change)': 'handleChangeEvent($event.target.value)'
-    '(change)': 'handleChangeEvent($event.target.value)'
   },
   providers: [
     {

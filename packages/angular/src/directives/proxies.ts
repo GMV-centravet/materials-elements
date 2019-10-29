@@ -144,7 +144,7 @@ export class MaterialsDatatableAction {
     proxyOutputs(this, this.el, ['press']);
   }
 }
-proxyMethods(MaterialsDatatableAction, ['press']);
+proxyMethods(MaterialsDatatableAction, ['TriggerPress']);
 proxyInputs(MaterialsDatatableAction, ['color', 'display', 'icon', 'label']);
 
 export declare interface MaterialsDatatableBody extends Components.MaterialsDatatableBody {}
@@ -309,7 +309,7 @@ export class MaterialsDrawerListItem {
     proxyOutputs(this, this.el, ['press']);
   }
 }
-proxyMethods(MaterialsDrawerListItem, ['press']);
+proxyMethods(MaterialsDrawerListItem, ['TriggerPress']);
 proxyInputs(MaterialsDrawerListItem, ['activated', 'icon', 'label', 'targetUrl']);
 
 export declare interface MaterialsDrawerWithTopAppBar extends Components.MaterialsDrawerWithTopAppBar {}

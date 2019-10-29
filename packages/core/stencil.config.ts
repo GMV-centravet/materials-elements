@@ -21,13 +21,7 @@ const angularValueAccessorBindings: ValueAccessorConfig[] = [
     type: "boolean"
   },
   {
-    elementSelectors: ["materials-autocomplete"],
-    event: EVENTS.Change,
-    targetAttr: ATTRS.Value,
-    type: "text"
-  },
-  {
-    elementSelectors: ["materials-date-field", "materials-time-field"],
+    elementSelectors: ["materials-autocomplete", "materials-date-field", "materials-time-field", "materials-text-field:not([type=number])", "materials-textarea"],
     event: EVENTS.Change,
     targetAttr: ATTRS.Value,
     type: "text"
@@ -43,12 +37,6 @@ const angularValueAccessorBindings: ValueAccessorConfig[] = [
     event: EVENTS.Change,
     targetAttr: ATTRS.Checked,
     type: "radio"
-  },
-  {
-    elementSelectors: ["materials-text-field:not([type=number])", "materials-textarea"],
-    event: EVENTS.Change,
-    targetAttr: ATTRS.Value,
-    type: "text"
   },
   {
     elementSelectors: ["materials-text-field:[type=number]"],

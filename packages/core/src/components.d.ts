@@ -205,6 +205,10 @@ export namespace Components {
   }
   interface MaterialsDatatableAction {
     /**
+    * Trigger a press event
+    */
+    'TriggerPress': (e: any) => Promise<void>;
+    /**
     * The datatable-action color, it can be either : - a predifined value : 'primary', 'secondary', 'error'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
     */
     'color': 'primary' | 'secondary' | 'error' | string;
@@ -220,10 +224,6 @@ export namespace Components {
     * The datatable action label
     */
     'label': string;
-    /**
-    * Trigger a press event
-    */
-    'press': (e: any) => Promise<void>;
   }
   interface MaterialsDatatableBody {}
   interface MaterialsDatatableBodyCell {
@@ -456,6 +456,10 @@ export namespace Components {
   }
   interface MaterialsDrawerListItem {
     /**
+    * Trigger a press event
+    */
+    'TriggerPress': (e: any) => Promise<void>;
+    /**
     * Mark this drawer item as activated
     */
     'activated': boolean;
@@ -467,10 +471,6 @@ export namespace Components {
     * The drawer item label
     */
     'label': string;
-    /**
-    * Trigger a press event
-    */
-    'press': (e: any) => Promise<void>;
     /**
     * render with a href="${targetUrl}"
     */

@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - stable
+install:
+  - npm install -g lerna
+  - npm run bootstrap
+script:
+  - lerna run test
+  - lerna run build
+deploy:
+  - provider: script
+    script: npx lerna publish --yes
+    skip_cleanup: true
+    keep_history: true
+    on:
+      branch: master

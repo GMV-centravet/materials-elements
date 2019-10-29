@@ -24,7 +24,7 @@
 
 ## Methods
 
-### `press(e: any) => Promise<void>`
+### `TriggerPress(e: any) => Promise<void>`
 
 Trigger a press event
 

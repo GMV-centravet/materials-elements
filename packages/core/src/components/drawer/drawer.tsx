@@ -74,7 +74,7 @@ export class Drawer {
               return <a class={{
                 'mdc-list-item': true,
                 'mdc-list-item--activated': item.activated
-              }} href={item.targetUrl} onClick={(e) => item.press(e)} aria-current="page">
+              }} href={item.targetUrl} onClick={(e) => item.TriggerPress(e)} aria-current="page">
                 {item.icon && <i class="material-icons mdc-list-item__graphic" aria-hidden="true">{item.icon}</i>}
                 <span class="mdc-list-item__text">{item.label}</span>
               </a>

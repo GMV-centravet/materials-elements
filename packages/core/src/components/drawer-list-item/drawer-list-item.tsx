@@ -26,7 +26,7 @@ export class DrawerListItem {
 
   /** Trigger a press event */
   @Method()
-  async press(e) {
+  async TriggerPress(e) {
     this.pressEvent.emit(e);
   }
 
