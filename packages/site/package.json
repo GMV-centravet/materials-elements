@@ -1,6 +1,6 @@
 {
   "name": "@materials-ui/site",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "materials-site",
   "license": "MIT",
   "module": "dist/index.mjs",
