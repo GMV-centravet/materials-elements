@@ -5,6 +5,7 @@ docs/components
 docs/dist
 _docs
 
+src/components.d.ts
 src/app/demos/**/app-*-api/*.tsx
 
 *~
