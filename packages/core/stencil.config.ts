@@ -67,9 +67,6 @@ export const config: Config = {
       loaderDir: 'lib/loader'
     }),
     {
-      type: 'docs-readme'
-    },
-    {
       type: 'www',
       serviceWorker: null // disable service workers
     }
