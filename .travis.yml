@@ -8,7 +8,8 @@ script:
   - lerna run build
 after_success:
   - git checkout $TRAVIS_BRANCH
-
+before_deploy:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 deploy:
   - provider: script
     script: npx lerna publish from-git --yes
