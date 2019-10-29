@@ -1,5 +1,5 @@
 {
-  "name": "@materials/core",
+  "name": "@materials-ui/core",
   "version": "0.0.6",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
@@ -74,5 +74,6 @@
   },
   "homepage": "https://github.com/GMV-centravet/materials",
   "author": "GMV-Centravet",
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "25d71193c29263497a5f8cf61e2c064ec50b4ed4"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@materials/angular",
+  "name": "@materials-ui/angular",
   "version": "0.0.6",
   "description": "Angular wrapper for @materials/core web components",
   "license": "MIT",
@@ -80,5 +80,6 @@
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   },
-  "schematics": "./dist/schematics/collection.json"
+  "schematics": "./dist/schematics/collection.json",
+  "gitHead": "25d71193c29263497a5f8cf61e2c064ec50b4ed4"
 }
