@@ -7,12 +7,12 @@ install:
 script:
   - lerna run build
 after_success:
-  - test $TRAVIS_BRANCH = "master" && git checkout master
+  - git checkout $TRAVIS_BRANCH
 
 deploy:
   - provider: script
-    script: npx lerna publish --yes
+    script: npx lerna publish from-git --yes
     skip_cleanup: true
     keep_history: true
     on:
-      branch: master
+      tags: true
