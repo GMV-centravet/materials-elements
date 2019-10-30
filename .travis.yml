@@ -16,4 +16,4 @@ deploy:
     skip_cleanup: true
     keep_history: true
     on:
-      tags: true
+      branch: master

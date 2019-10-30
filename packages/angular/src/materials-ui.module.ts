@@ -83,6 +83,6 @@ const DECLARATIONS = [
   imports: [CommonModule],
   exports: [DECLARATIONS]
 })
-export class MaterialsAngularModule {
+export class MaterialsUIModule {
 
 }
