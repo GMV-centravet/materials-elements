@@ -1,7 +1,8 @@
 {
   "packages": [
     "packages/*",
-    "packages/angular/projects/*"
+    "packages/angular/projects/*",
+    "packages/angular/dist/*"
   ],
   "version": "0.0.15",
   "command": {

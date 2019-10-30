@@ -15,9 +15,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "@materials-ui/core": "^0.0.15"
   },
