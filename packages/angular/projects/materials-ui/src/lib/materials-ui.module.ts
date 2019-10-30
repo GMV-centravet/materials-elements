@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { NumericValueAccessor } from '../directives/number-value-accessor';
 // tslint:disable-next-line: max-line-length
@@ -76,8 +77,7 @@ const DECLARATIONS = [
 
 @NgModule({
   declarations: DECLARATIONS,
-  imports: [
-  ],
+  imports: [CommonModule],
   exports: DECLARATIONS
 })
 export class MaterialsUiModule { }
