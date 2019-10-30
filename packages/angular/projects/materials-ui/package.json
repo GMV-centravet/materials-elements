@@ -1,6 +1,6 @@
 {
   "name": "@materials-ui/angular",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Angular wrapper for @materials-ui/core web components",
   "license": "MIT",
   "repository": {
@@ -17,7 +17,7 @@
   },
   "private": true,
   "dependencies": {
-    "@materials-ui/core": "^0.0.16"
+    "@materials-ui/core": "^0.0.17"
   },
   "peerDependencies": {
     "@angular/common": "^8.2.12",
