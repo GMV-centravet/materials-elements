@@ -17,3 +17,7 @@ deploy:
     keep_history: true
     on:
       branch: master
+
+after_deploy:
+  - sed '/"private"/d' packages/angular/dist/materials-ui/package.json
+  - cd packages/angular/dist/materials-ui && npm publish

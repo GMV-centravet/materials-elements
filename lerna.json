@@ -1,7 +1,6 @@
 {
   "packages": [
     "packages/*",
-    "packages/angular/dist/*",
     "packages/angular/projects/*"
   ],
   "version": "0.0.16",
