@@ -1,17 +1,6 @@
 {
-  "name": "@materials-ui/angular",
-  "version": "0.0.11",
-  "description": "Angular wrapper for @materials-ui/core web components",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GMV-centravet/materials.git"
-  },
-  "bugs": {
-    "url": "https://github.com/GMV-centravet/materials/issues"
-  },
-  "homepage": "https://github.com/GMV-centravet/materials",
-  "author": "GMV-Centravet",
+  "name": "@materials-ui/angular-workspace",
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,51 +9,30 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "module": "dist/fesm5.js",
-  "main": "dist/fesm5.cjs.js",
-  "types": "dist/core.d.ts",
-  "files": [
-    "dist/"
-  ],
+  "private": true,
   "dependencies": {
+    "@angular/animations": "~8.2.12",
+    "@angular/common": "~8.2.12",
+    "@angular/compiler": "~8.2.12",
+    "@angular/core": "~8.2.12",
+    "@angular/forms": "~8.2.12",
+    "@angular/platform-browser": "~8.2.12",
+    "@angular/platform-browser-dynamic": "~8.2.12",
+    "@angular/router": "~8.2.12",
     "@materials-ui/core": "^0.0.11",
-    "tslib": "^1.10.0"
-  },
-  "peerDependencies": {
-    "@angular-devkit/core": "7.2.1 - 8",
-    "@angular-devkit/schematics": "7.2.1 - 8",
-    "@angular/common": "7.2.1 - 8",
-    "@angular/compiler": "7.2.1 - 8",
-    "@angular/compiler-cli": "7.2.1 - 8",
-    "@angular/core": "7.2.1 - 8",
-    "@angular/forms": "7.2.1 - 8",
-    "@angular/platform-browser": "7.2.1 - 8",
-    "@angular/platform-browser-dynamic": "7.2.1 - 8",
-    "@angular/router": "7.2.1 - 8",
-    "rxjs": ">=6.2.0",
-    "zone.js": ">=0.8.26"
+    "rxjs": "~6.4.0",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.15",
     "@angular-devkit/build-ng-packagr": "~0.803.15",
-    "@angular-devkit/core": "~8.3.15",
-    "@angular-devkit/schematics": "~8.3.15",
     "@angular/cli": "~8.3.15",
-    "@angular/common": "^8.2.12",
-    "@angular/compiler": "^8.2.12",
-    "@angular/compiler-cli": "^8.2.12",
-    "@angular/core": "^8.2.12",
-    "@angular/forms": "^8.2.12",
-    "@angular/language-service": "^8.2.12",
-    "@angular/platform-browser": "^8.2.12",
-    "@angular/platform-browser-dynamic": "^8.2.12",
-    "@angular/router": "^8.2.12",
+    "@angular/compiler-cli": "~8.2.12",
+    "@angular/language-service": "~8.2.12",
+    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -79,7 +47,5 @@
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  },
-  "schematics": "./dist/schematics/collection.json",
-  "gitHead": "25d71193c29263497a5f8cf61e2c064ec50b4ed4"
+  }
 }

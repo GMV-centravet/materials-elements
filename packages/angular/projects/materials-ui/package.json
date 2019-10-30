@@ -1,0 +1,25 @@
+{
+  "name": "@materials-ui/angular",
+  "version": "0.0.11",
+  "description": "Angular wrapper for @materials-ui/core web components",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GMV-centravet/materials.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GMV-centravet/materials/issues"
+  },
+  "homepage": "https://github.com/GMV-centravet/materials",
+  "author": "GMV-Centravet",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@materials-ui/core": "^0.0.11"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.12",
+    "@angular/core": "^8.2.12"
+  }
+}

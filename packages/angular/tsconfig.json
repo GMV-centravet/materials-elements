@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "materials-ui": [
+        "dist/materials-ui"
+      ],
+      "materials-ui/*": [
+        "dist/materials-ui/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

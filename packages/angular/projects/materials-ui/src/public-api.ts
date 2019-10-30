@@ -1,11 +1,10 @@
 /*
- * Public API Surface of my-lib
+ * Public API Surface of materials-ui
  */
-
 export * from './directives/boolean-value-accessor';
 export * from './directives/number-value-accessor';
 export * from './directives/radio-value-accessor';
 export * from './directives/select-value-accessor';
 export * from './directives/text-value-accessor';
 export * from './directives/proxies';
-export * from './materials-ui.module';
+export * from './lib/materials-ui.module';
