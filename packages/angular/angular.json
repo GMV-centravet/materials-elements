@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/materials-ui",
       "sourceRoot": "projects/materials-ui/src",
-      "prefix": "lib",
+      "prefix": "materials",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -37,6 +37,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "materials-ui"
 }

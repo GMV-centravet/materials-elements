@@ -57,7 +57,7 @@ export const config: Config = {
     },
     angularOutputTarget({
       componentCorePackage: '@materials-ui/core',
-      directivesProxyFile: '../angular/src/directives/proxies.ts',
+      directivesProxyFile: '../angular/projects/materials-ui/src/directives/proxies.ts',
       valueAccessorConfigs: angularValueAccessorBindings,
     }),
     {
