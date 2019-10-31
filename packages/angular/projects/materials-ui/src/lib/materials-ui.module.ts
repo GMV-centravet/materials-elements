@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { appInitialize } from './app-initialize';
+import { NgModule, ModuleWithProviders, APP_INITIALIZER } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 
 import { NumericValueAccessor } from '../directives/number-value-accessor';
 // tslint:disable-next-line: max-line-length
@@ -80,4 +81,20 @@ const DECLARATIONS = [
   imports: [CommonModule],
   exports: DECLARATIONS
 })
-export class MaterialsUiModule { }
+export class MaterialsUiModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: MaterialsUiModule,
+      providers: [
+        {
+          provide: APP_INITIALIZER,
+          useFactory: appInitialize,
+          multi: true,
+          deps: [
+            DOCUMENT
+          ]
+        }
+      ]
+    };
+  }
+}
