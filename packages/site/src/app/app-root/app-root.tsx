@@ -139,6 +139,12 @@ export class AppRoot {
       { path: '/components/card-action', component: 'app-card-action-tabs' },
       { path: '/components/card-action/demo', component: 'app-card-action-tabs' },
       { path: '/components/card-action/api', component: 'app-card-action-tabs' },
+         { path: '/components/dialog-controller', component: 'app-dialog-controller-tabs' },
+         { path: '/components/dialog-controller/demo', component: 'app-dialog-controller-tabs' },
+         { path: '/components/dialog-controller/api', component: 'app-dialog-controller-tabs' },
+         { path: '/components/alert-controller', component: 'app-alert-controller-tabs' },
+         { path: '/components/alert-controller/demo', component: 'app-alert-controller-tabs' },
+         { path: '/components/alert-controller/api', component: 'app-alert-controller-tabs' },
          /* ROUTE GENERATION NEEDLE */
     ]);
   }
@@ -193,6 +199,8 @@ export class AppRoot {
         <materials-drawer-list-item label="Subtitle" targetUrl="/components/subtitle" />
         <materials-drawer-list-item label="Headline" targetUrl="/components/headline" />
         <materials-drawer-list-item label="Card action" targetUrl="/components/card-action" />
+<materials-drawer-list-item label="Dialog controller" targetUrl="/components/dialog-controller" />
+<materials-drawer-list-item label="Alert controller" targetUrl="/components/alert-controller" />
 {/* MENU GENERATION NEEDLE */}
         <div id="outlet" slot="main" />
       </materials-drawer-with-top-app-bar>
