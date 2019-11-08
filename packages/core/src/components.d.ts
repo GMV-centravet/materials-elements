@@ -58,6 +58,20 @@ export namespace Components {
     */
     'value': {label?: string, value: string};
   }
+  interface MaterialsBadge {
+    /**
+    * The badge background color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
+    */
+    'color': 'primary' | 'secondary' | string;
+    /**
+    * The badge text color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
+    */
+    'inkColor': 'primary' | 'secondary' | string;
+    /**
+    * Label displayed
+    */
+    'label': string | number;
+  }
   interface MaterialsButton {
     /**
     * Render a block Material button (Full width)
@@ -915,6 +929,12 @@ declare global {
     new (): HTMLMaterialsAutocompleteElement;
   };
 
+  interface HTMLMaterialsBadgeElement extends Components.MaterialsBadge, HTMLStencilElement {}
+  var HTMLMaterialsBadgeElement: {
+    prototype: HTMLMaterialsBadgeElement;
+    new (): HTMLMaterialsBadgeElement;
+  };
+
   interface HTMLMaterialsButtonElement extends Components.MaterialsButton, HTMLStencilElement {}
   var HTMLMaterialsButtonElement: {
     prototype: HTMLMaterialsButtonElement;
@@ -1229,6 +1249,7 @@ declare global {
   interface HTMLElementTagNameMap {
     'materials-alert-controller': HTMLMaterialsAlertControllerElement;
     'materials-autocomplete': HTMLMaterialsAutocompleteElement;
+    'materials-badge': HTMLMaterialsBadgeElement;
     'materials-button': HTMLMaterialsButtonElement;
     'materials-card': HTMLMaterialsCardElement;
     'materials-card-action': HTMLMaterialsCardActionElement;
@@ -1315,6 +1336,20 @@ declare namespace LocalJSX {
     * Value of the autocomplete text-field composed by a label to be displayed in the text-field and a value that is a real value if no label given, label = value
     */
     'value'?: {label?: string, value: string};
+  }
+  interface MaterialsBadge extends JSXBase.HTMLAttributes<HTMLMaterialsBadgeElement> {
+    /**
+    * The badge background color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
+    */
+    'color'?: 'primary' | 'secondary' | string;
+    /**
+    * The badge text color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
+    */
+    'inkColor'?: 'primary' | 'secondary' | string;
+    /**
+    * Label displayed
+    */
+    'label'?: string | number;
   }
   interface MaterialsButton extends JSXBase.HTMLAttributes<HTMLMaterialsButtonElement> {
     /**
@@ -2154,6 +2189,7 @@ declare namespace LocalJSX {
   interface IntrinsicElements {
     'materials-alert-controller': MaterialsAlertController;
     'materials-autocomplete': MaterialsAutocomplete;
+    'materials-badge': MaterialsBadge;
     'materials-button': MaterialsButton;
     'materials-card': MaterialsCard;
     'materials-card-action': MaterialsCardAction;
