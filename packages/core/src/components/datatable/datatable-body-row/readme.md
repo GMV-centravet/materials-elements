@@ -28,8 +28,8 @@
 
 ### Depends on
 
-- [materials-icon-button](..\..\icon-button)
-- [materials-checkbox](..\..\checkbox)
+- [materials-icon-button](../../icon-button)
+- [materials-checkbox](../../checkbox)
 
 ### Graph
 ```mermaid
