@@ -53,6 +53,17 @@ export class MaterialsAutocomplete {
 }
 proxyInputs(MaterialsAutocomplete, ['autocomplete', 'dense', 'label', 'maxSuggestions', 'trailingIcon', 'value']);
 
+export declare interface MaterialsBadge extends Components.MaterialsBadge {}
+@Component({ selector: 'materials-badge', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['color', 'inkColor', 'label'] })
+export class MaterialsBadge {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+proxyInputs(MaterialsBadge, ['color', 'inkColor', 'label']);
+
 export declare interface MaterialsButton extends Components.MaterialsButton {}
 @Component({ selector: 'materials-button', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['block', 'color', 'dense', 'disabled', 'icon', 'outlined', 'raised', 'type', 'unelevated'] })
 export class MaterialsButton {

@@ -15,7 +15,7 @@
     "prepare-readme-files": "cd ../core && rsync -R src/components/**/readme.md ../site/docs ",
     "clean": "rm -rf _docs && rm -rf docs/components/**",
     "generate:apis": "npm run clean && npm run prepare-readme-files && markdown-folder-to-html && node scripts/generate-api-pages",
-    "start": "npm run generate:apis && stencil build --dev --watch --serve",
+    "start": "cd ../core && stencil build --docs && cd ../site && npm run generate:apis && stencil build --dev --watch --serve",
     "start-simple": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watch",

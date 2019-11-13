@@ -1,0 +1,26 @@
+:host {
+  span {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    height: 20px;
+    padding: 0 4px;
+    min-width: 20px;
+    margin: 4px;
+  }
+}
+
+.mdc-badge.mdc-theme--secondary {
+  --mdc-theme-primary: var(--mdc-theme-secondary);
+  --mdc-theme-on-primary: var(--mdc-theme-on-secondary);
+}
+
+.mdc-badge--colored {
+  background-color: var(--mdc-theme-primary);
+}
+
+.mdc-badge--ink-colored {
+  color: var(--mdc-theme-on-primary);
+}
