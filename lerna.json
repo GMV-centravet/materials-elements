@@ -3,7 +3,7 @@
     "packages/*",
     "packages/angular/projects/*"
   ],
-  "version": "0.0.20",
+  "version": "0.0.21",
   "command": {
     "version": {
       "message": "chore(release): release"
