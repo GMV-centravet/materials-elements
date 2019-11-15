@@ -55,7 +55,7 @@ export class TopAppBar {
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
           {this.actions.map(a =>
-            <a href="#" class={{ 'material-icons': !!a.icon, 'mdc-top-app-bar__action-item': true }} aria-label={a.actionTitle} title={a.actionTitle}>{a.label}</a>
+            <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label={a.title} title={a.title}>{a.icon}</a>
           )}
         </section>
       </div>

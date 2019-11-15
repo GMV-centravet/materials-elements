@@ -908,9 +908,7 @@ export namespace Components {
     'short': boolean;
   }
   interface MaterialsTopAppBarAction {
-    'actionTitle': string;
     'icon'?: string;
-    'label': string;
   }
 }
 
@@ -2181,9 +2179,7 @@ declare namespace LocalJSX {
     'short'?: boolean;
   }
   interface MaterialsTopAppBarAction extends JSXBase.HTMLAttributes<HTMLMaterialsTopAppBarActionElement> {
-    'actionTitle'?: string;
     'icon'?: string;
-    'label'?: string;
   }
 
   interface IntrinsicElements {

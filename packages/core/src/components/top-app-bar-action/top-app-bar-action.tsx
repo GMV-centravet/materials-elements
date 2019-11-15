@@ -8,8 +8,6 @@ import { Component, Prop } from '@stencil/core';
 })
 export class TopAppBarAction {
 
-  @Prop() label: string;
-  @Prop() actionTitle: string;
   @Prop() icon?: string;
 
   render() {
