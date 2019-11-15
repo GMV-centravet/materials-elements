@@ -1,6 +1,6 @@
 import { MDCDrawer } from '@material/drawer';
 import { MDCTopAppBar } from '@material/top-app-bar';
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, Element, h, Prop, State } from '@stencil/core';
 import { Host } from '@stencil/core';
 
 @Component({
@@ -19,17 +19,29 @@ export class DrawerWithTopAppBar {
   @Prop() open: boolean;
 
 
-  private drawer: MDCDrawer;
+  @State()
   private actions: HTMLMaterialsTopAppBarActionElement[];
+  @State()
   private items: HTMLMaterialsDrawerListItemElement[];
 
+  private drawer: MDCDrawer;
+
   componentWillLoad() {
-    this.actions = Array.from(this.host.querySelectorAll('materials-top-app-bar-action'));
-    this.items = Array.from(this.host.querySelectorAll('materials-drawer-list-item'));
+    // Observe host childList mutations
+    new MutationObserver((mutationsList, _observer) => {
+      for (let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+          this.initActions();
+          this.initDrawerItems();
+        }
+      }
+    }).observe(this.host, { attributes: false, childList: true, subtree: false });
+    this.initActions();
+    this.initDrawerItems();
   }
 
   async componentDidLoad() {
-    if (!this.drawer && this.items.length > 0) {
+    if (!this.drawer) {
       this.drawer = MDCDrawer.attachTo(this.host.shadowRoot.querySelector('.mdc-drawer'));
       this.drawer.open = this.open;
       const topAppBar = MDCTopAppBar.attachTo(this.host.shadowRoot.getElementById('app-bar'));
@@ -40,6 +52,34 @@ export class DrawerWithTopAppBar {
         this.drawer.open = !this.drawer.open;
       });
     }
+  }
+
+  initActions() {
+    this.actions = Array.from(this.host.querySelectorAll('materials-top-app-bar-action'));
+    // Init existing action observation
+    this.actions.forEach(node => {
+      new MutationObserver((mutationsList, _observer) => {
+        for (let mutation of mutationsList) {
+          if (mutation.type === 'attributes') {
+            this.actions = [...this.actions];
+          }
+        }
+      }).observe(node, { attributes: true, childList: false, subtree: false });
+    });
+  }
+
+  initDrawerItems() {
+    this.items = Array.from(this.host.querySelectorAll('materials-drawer-list-item'));
+    // Init existing action observation
+    this.items.forEach(node => {
+      new MutationObserver((mutationsList, _observer) => {
+        for (let mutation of mutationsList) {
+          if (mutation.type === 'attributes') {
+            this.items = [...this.items];
+          }
+        }
+      }).observe(node, { attributes: true, childList: false, subtree: false });
+    });
   }
 
   renderAppBar() {
@@ -61,7 +101,7 @@ export class DrawerWithTopAppBar {
           </section>
           <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
             {this.actions.map(a =>
-              <a href="#" class={{ 'material-icons': !!a.icon, 'mdc-top-app-bar__action-item': true }} aria-label={a.actionTitle} title={a.actionTitle}>{a.label}</a>
+              <a href="#" onClick={() => a.click()} class="material-icons mdc-top-app-bar__action-item" aria-label={a.title} title={a.title}>{a.icon}</a>
             )}
           </section>
         </div>
@@ -138,13 +178,17 @@ export class DrawerWithTopAppBar {
   render() {
     switch (this.drawerType) {
       case 'modal':
-        return this.renderModal();
+        return <Host>
+          {this.renderModal()}
+        </Host>
       case 'below':
         return <Host class={{ 'materials-drawer--below': true }}>
           {this.renderBelow()}
         </Host>
       case 'fullHeight':
-        return this.renderFull();
+        return <Host>
+          {this.renderFull()}
+        </Host>
     }
   }
 }

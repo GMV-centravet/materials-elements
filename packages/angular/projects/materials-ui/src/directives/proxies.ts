@@ -701,7 +701,7 @@ export class MaterialsTopAppBar {
 proxyInputs(MaterialsTopAppBar, ['barTitle', 'dense', 'fixed', 'prominent', 'short']);
 
 export declare interface MaterialsTopAppBarAction extends Components.MaterialsTopAppBarAction {}
-@Component({ selector: 'materials-top-app-bar-action', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['actionTitle', 'icon', 'label'] })
+@Component({ selector: 'materials-top-app-bar-action', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['icon'] })
 export class MaterialsTopAppBarAction {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef) {
@@ -709,4 +709,4 @@ export class MaterialsTopAppBarAction {
     this.el = r.nativeElement;
   }
 }
-proxyInputs(MaterialsTopAppBarAction, ['actionTitle', 'icon', 'label']);
+proxyInputs(MaterialsTopAppBarAction, ['icon']);
