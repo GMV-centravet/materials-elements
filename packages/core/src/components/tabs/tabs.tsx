@@ -63,7 +63,6 @@ export class Tabs {
     Array.from(this.host.shadowRoot.querySelectorAll('.mdc-tab')).forEach(tab => MDCTab.attachTo(tab));
   }
 
-
   getClasses() {
     return {
       'mdc-tab-bar': true

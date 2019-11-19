@@ -32,7 +32,7 @@ export class AppAutocompleteDemo {
     return (
       <Host>
       <app-demo-code-block blockTitle="Autocomplete">
-      <materials-autocomplete slot="demo" autocomplete={autocompleteCb}></materials-autocomplete>
+      <materials-autocomplete maxSuggestions={3} slot="demo" autocomplete={autocompleteCb}></materials-autocomplete>
       <code slot="code">
       {
         `<script>

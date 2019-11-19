@@ -19,6 +19,11 @@ export class Tab {
 
   @Prop() minWidth: boolean;
 
+  @Prop() badgeLabel: string | number;
+
+  @Prop() badgeColor: 'primary' | 'secondary' | string = 'primary';
+
+  @Prop() badgeInkColor: 'primary' | 'secondary' | string = 'primary';
 
   getIndicatorClasses() {
     return {
@@ -36,7 +41,7 @@ export class Tab {
       'mdc-tab--min-width': this.minWidth
     }
   }
-
+  
   @Method()
   async renderHtml() {
     return Promise.resolve(
@@ -53,6 +58,7 @@ export class Tab {
           </span>
         </span>
         <span class="mdc-tab__ripple"></span>
+        {this.badgeLabel && <materials-badge label={this.badgeLabel} color={this.badgeColor} inkColor={this.badgeInkColor}/>}
       </button>
     );
   }

@@ -1,6 +1,6 @@
 import { MDCIconButtonToggle } from '@material/icon-button';
 import { MDCRipple } from '@material/ripple';
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, Element, h, Listen, Prop } from '@stencil/core';
 
 // https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon-button
 // TODO: gerer les couleurs
@@ -39,7 +39,7 @@ export class IconButton {
   @Element() host: HTMLMaterialsIconButtonElement;
   iconButtonEl;
   iconButtonToggleEl;
-  @Prop() disabled: boolean;
+  @Prop() disabled = false;
   @Prop() pressed: boolean;
   @Prop() icon: string;
   @Prop() iconOn: string;
@@ -73,6 +73,14 @@ export class IconButton {
     this.initSvg();
 
   }
+
+  @Listen('click', {capture: true})
+  allowClickEvent(ev: Event) {
+    if (this.disabled) {
+      ev.preventDefault();
+    }
+  }
+
   /**
    * Set la width et height à 24;
    * Et ajoute les classes MDC aux elements svg inséré dans les slot svg & svg-off.

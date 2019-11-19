@@ -605,16 +605,18 @@ export class MaterialsSwitch {
 proxyInputs(MaterialsSwitch, ['checked', 'disabled', 'label']);
 
 export declare interface MaterialsTab extends Components.MaterialsTab {}
-@Component({ selector: 'materials-tab', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['active', 'icon', 'indicatorType', 'label', 'minWidth'] })
+@Component({ selector: 'materials-tab', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['active', 'badgeColor', 'badgeInkColor', 'badgeLabel', 'icon', 'indicatorType', 'label', 'minWidth'] })
 export class MaterialsTab {
+  tabPropChanged!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['tabPropChanged']);
   }
 }
 proxyMethods(MaterialsTab, ['renderHtml']);
-proxyInputs(MaterialsTab, ['active', 'icon', 'indicatorType', 'label', 'minWidth']);
+proxyInputs(MaterialsTab, ['active', 'badgeColor', 'badgeInkColor', 'badgeLabel', 'icon', 'indicatorType', 'label', 'minWidth']);
 
 export declare interface MaterialsTabs extends Components.MaterialsTabs {}
 @Component({ selector: 'materials-tabs', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['activeTab', 'color', 'indicatorType', 'shrinkTabs'] })
