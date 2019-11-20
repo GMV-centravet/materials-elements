@@ -29,21 +29,12 @@ export class Tabs {
   private mdcTabs: MDCTabBar;
 
   componentWillLoad() {
-    // Observe host childList mutations
-    new MutationObserver((mutationsList, _observer) => {
-      for (let mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-          this.initTabs();
-        }
-      }
-    }).observe(this.host, { attributes: false, childList: true, subtree: false });
-    this.initTabs();
-  }
-
-  initTabs() {
     this.tabElements = Array.from(this.host.querySelectorAll('materials-tab'));
     this.tabElements.forEach(tab => {
-      new MutationObserver((mutationsList, _observer) => {
+      tab.minWidth = this.shrinkTabs;
+      tab.indicatorType = this.indicatorType;
+      new MutationObserver((mutationsList, _observer) => {            
+        console.log('CACA DE LA BITE');
         for (let mutation of mutationsList) {
           if (mutation.type === 'attributes') {
             this.tabElements = [...this.tabElements];
@@ -69,7 +60,25 @@ export class Tabs {
     }
   }
 
+  getIndicatorClasses(tab: HTMLMaterialsTabElement) {
+    return {
+      'mdc-tab-indicator__content': true,
+      'mdc-tab-indicator__content--icon': tab.indicatorType === 'icon',
+      'mdc-tab-indicator__content--underline': tab.indicatorType === 'underline',
+      'material-icons': tab.indicatorType === 'icon'
+    }
+  }
+
+  getTabClasses(tab: HTMLMaterialsTabElement) {
+    return {
+      'mdc-tab': true,
+      'mdc-tab--active': tab.active,
+      'mdc-tab--min-width': tab.minWidth
+    }
+  }
+
   render() {
+    console.log('RENDER MATERIAL TABS', this.tabElements);
     return (
       <Host class={{
         'materials-tab-background': this.color === 'background',
@@ -81,7 +90,23 @@ export class Tabs {
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
               <div class="mdc-tab-scroller__scroll-content">
-                {this.tabElements.map(tab => tab)}
+                {this.tabElements.map(tab => 
+                  <button class={this.getTabClasses(tab)} role="tab" aria-selected="true" tabindex={tab.active ? '0' : '-1'}>
+                    <span class="mdc-tab__content">
+                      {tab.icon && <span class="mdc-tab__icon material-icons" aria-hidden="true">{tab.icon}</span>}
+                      <span class="mdc-tab__text-label">
+                        {tab.label ? tab.label : <slot />}
+                      </span>
+                    </span>
+                    <span class={{ 'mdc-tab-indicator': true, 'mdc-tab-indicator--active': tab.active }}>
+                      <span class={this.getIndicatorClasses(tab)}>
+                        {tab.indicatorType === 'icon' && 'star'}
+                      </span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                    {tab.badgeLabel && <materials-badge label={tab.badgeLabel} color={tab.badgeColor} inkColor={tab.badgeInkColor}/>}
+                  </button>
+                )}
               </div>
             </div>
           </div>

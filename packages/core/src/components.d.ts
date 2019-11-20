@@ -771,7 +771,6 @@ export namespace Components {
     'indicatorType': 'underline' | 'icon';
     'label': string;
     'minWidth': boolean;
-    'renderHtml': () => Promise<any>;
   }
   interface MaterialsTabs {
     'activeTab': number;
@@ -2037,7 +2036,6 @@ declare namespace LocalJSX {
     'indicatorType'?: 'underline' | 'icon';
     'label'?: string;
     'minWidth'?: boolean;
-    'onTabPropChanged'?: (event: CustomEvent<any>) => void;
   }
   interface MaterialsTabs extends JSXBase.HTMLAttributes<HTMLMaterialsTabsElement> {
     'activeTab'?: number;
