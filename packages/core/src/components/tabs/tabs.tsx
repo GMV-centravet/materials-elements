@@ -34,7 +34,6 @@ export class Tabs {
       tab.minWidth = this.shrinkTabs;
       tab.indicatorType = this.indicatorType;
       new MutationObserver((mutationsList, _observer) => {            
-        console.log('CACA DE LA BITE');
         for (let mutation of mutationsList) {
           if (mutation.type === 'attributes') {
             this.tabElements = [...this.tabElements];
@@ -78,7 +77,6 @@ export class Tabs {
   }
 
   render() {
-    console.log('RENDER MATERIAL TABS', this.tabElements);
     return (
       <Host class={{
         'materials-tab-background': this.color === 'background',

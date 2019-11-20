@@ -19,14 +19,13 @@ export class Tab {
 
   @Prop() minWidth: boolean;
 
-  @Prop() badgeLabel: string | number;
+  @Prop({reflectToAttr: true}) badgeLabel: string | number;
 
   @Prop() badgeColor: 'primary' | 'secondary' | string = 'primary';
 
   @Prop() badgeInkColor: 'primary' | 'secondary' | string = 'primary';
 
   render() {
-    console.log('propchanged', this.badgeLabel);
     return;
   }
 }
