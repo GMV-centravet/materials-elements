@@ -7,11 +7,9 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type     | Default     |
-| ------------- | -------------- | ----------- | -------- | ----------- |
-| `actionTitle` | `action-title` |             | `string` | `undefined` |
-| `icon`        | `icon`         |             | `string` | `undefined` |
-| `label`       | `label`        |             | `string` | `undefined` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `icon`   | `icon`    |             | `string` | `undefined` |
 
 
 ----------------------------------------------

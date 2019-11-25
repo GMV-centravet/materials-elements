@@ -148,6 +148,9 @@ export class AppRoot {
       { path: '/components/badge', component: 'app-badge-tabs' },
       { path: '/components/badge/demo', component: 'app-badge-tabs' },
       { path: '/components/badge/api', component: 'app-badge-tabs' },
+         { path: '/components/_docs', component: 'app-_docs-tabs' },
+         { path: '/components/_docs/demo', component: 'app-_docs-tabs' },
+         { path: '/components/_docs/api', component: 'app-_docs-tabs' },
          /* ROUTE GENERATION NEEDLE */
     ]);
   }
