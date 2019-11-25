@@ -1,4 +1,10 @@
+@import "@material/typography/mdc-typography";
+
 :host {
+  /** 
+  * @prop --materials-badge-color: The background color of the badge 
+  * @prop --materials-badge-ink-color: The text color of the badge 
+  */
   span {
     position: relative;
     top: 0px;
@@ -9,18 +15,7 @@
     padding: 0 4px;
     min-width: 20px;
     margin: 4px;
+    background-color: var(--materials-badge-color);
+    color: var(--materials-badge-ink-color);
   }
-}
-
-.mdc-badge.mdc-theme--secondary {
-  --mdc-theme-primary: var(--mdc-theme-secondary);
-  --mdc-theme-on-primary: var(--mdc-theme-on-secondary);
-}
-
-.mdc-badge--colored {
-  background-color: var(--mdc-theme-primary);
-}
-
-.mdc-badge--ink-colored {
-  color: var(--mdc-theme-on-primary);
 }

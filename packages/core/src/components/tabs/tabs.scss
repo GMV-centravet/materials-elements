@@ -6,6 +6,14 @@
 
 
 :host {
+
+  /** 
+  * @prop --materials-tab-badge-color: The background color of the badge in the tab
+  * @prop --materials-tab-badge-ink-color: The text color of the badge in the tab
+  */
+  --materials-tab-badge-color: var(--materials-badge-color);
+  --materials-tab-badge-ink-color: var(--materials-badge-ink-color);
+
   display: block;
 
   .mdc-tab-scroller__scroll-area--scroll {

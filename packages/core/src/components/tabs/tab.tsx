@@ -19,12 +19,6 @@ export class Tab {
 
   @Prop() minWidth: boolean;
 
-  @Prop({reflectToAttr: true}) badgeLabel: string | number;
-
-  @Prop() badgeColor: 'primary' | 'secondary' | string = 'primary';
-
-  @Prop() badgeInkColor: 'primary' | 'secondary' | string = 'primary';
-
   render() {
     return;
   }
