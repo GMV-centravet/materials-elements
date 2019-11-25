@@ -34,7 +34,7 @@
 
 ### Depends on
 
-- [materials-badge](..\badge)
+- [materials-badge](../badge)
 
 ### Graph
 ```mermaid

@@ -12,7 +12,7 @@
 | Property   | Attribute   | Description | Type      | Default     |
 | ---------- | ----------- | ----------- | --------- | ----------- |
 | `dense`    | `dense`     |             | `boolean` | `false`     |
-| `disabled` | `disabled`  |             | `boolean` | `undefined` |
+| `disabled` | `disabled`  |             | `boolean` | `false`     |
 | `icon`     | `icon`      |             | `string`  | `undefined` |
 | `iconOff`  | `icon-off`  |             | `string`  | `undefined` |
 | `iconOn`   | `icon-on`   |             | `string`  | `undefined` |

@@ -17,7 +17,7 @@
 
 ### Used by
 
- - [materials-tabs](..\tabs)
+ - [materials-tabs](../tabs)
 
 ### Graph
 ```mermaid
