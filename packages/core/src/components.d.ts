@@ -58,20 +58,7 @@ export namespace Components {
     */
     'value': {label?: string, value: string};
   }
-  interface MaterialsBadge {
-    /**
-    * The badge background color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
-    */
-    'color': 'primary' | 'secondary' | string;
-    /**
-    * The badge text color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
-    */
-    'inkColor': 'primary' | 'secondary' | string;
-    /**
-    * Label displayed
-    */
-    'label': string | number;
-  }
+  interface MaterialsBadge {}
   interface MaterialsButton {
     /**
     * Render a block Material button (Full width)
@@ -765,10 +752,7 @@ export namespace Components {
   interface MaterialsTab {
     'active': boolean;
     'icon': string;
-    'indicatorType': 'underline' | 'icon';
     'label': string;
-    'minWidth': boolean;
-    'renderHtml': () => Promise<any>;
   }
   interface MaterialsTabs {
     'activeTab': number;
@@ -1335,20 +1319,7 @@ declare namespace LocalJSX {
     */
     'value'?: {label?: string, value: string};
   }
-  interface MaterialsBadge extends JSXBase.HTMLAttributes<HTMLMaterialsBadgeElement> {
-    /**
-    * The badge background color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
-    */
-    'color'?: 'primary' | 'secondary' | string;
-    /**
-    * The badge text color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.
-    */
-    'inkColor'?: 'primary' | 'secondary' | string;
-    /**
-    * Label displayed
-    */
-    'label'?: string | number;
-  }
+  interface MaterialsBadge extends JSXBase.HTMLAttributes<HTMLMaterialsBadgeElement> {}
   interface MaterialsButton extends JSXBase.HTMLAttributes<HTMLMaterialsButtonElement> {
     /**
     * Render a block Material button (Full width)
@@ -2028,9 +1999,7 @@ declare namespace LocalJSX {
   interface MaterialsTab extends JSXBase.HTMLAttributes<HTMLMaterialsTabElement> {
     'active'?: boolean;
     'icon'?: string;
-    'indicatorType'?: 'underline' | 'icon';
     'label'?: string;
-    'minWidth'?: boolean;
   }
   interface MaterialsTabs extends JSXBase.HTMLAttributes<HTMLMaterialsTabsElement> {
     'activeTab'?: number;

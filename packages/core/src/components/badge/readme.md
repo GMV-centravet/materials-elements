@@ -5,14 +5,26 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## CSS Custom Properties
 
-| Property   | Attribute   | Description                                                                                                                                                          | Type               | Default     |
-| ---------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------- |
-| `color`    | `color`     | The badge background color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue. | `string`           | `'primary'` |
-| `inkColor` | `ink-color` | The badge text color, it can be either : - a predifined value : 'primary', 'secondary'. - an hexa color code : #225566, #CCC. - a css named color : red, blue.       | `string`           | `'primary'` |
-| `label`    | `label`     | Label displayed                                                                                                                                                      | `number \| string` | `undefined` |
+| Name                          | Description                       |
+| ----------------------------- | --------------------------------- |
+| `--materials-badge-color`     | The background color of the badge |
+| `--materials-badge-ink-color` | The text color of the badge       |
 
+
+## Dependencies
+
+### Used by
+
+ - [materials-tabs](..\tabs)
+
+### Graph
+```mermaid
+graph TD;
+  materials-tabs --> materials-badge
+  style materials-badge fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 
