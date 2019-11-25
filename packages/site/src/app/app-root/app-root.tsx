@@ -202,10 +202,10 @@ export class AppRoot {
         <materials-drawer-list-item label="Subtitle" targetUrl="/components/subtitle" />
         <materials-drawer-list-item label="Headline" targetUrl="/components/headline" />
         <materials-drawer-list-item label="Card action" targetUrl="/components/card-action" />
-<materials-drawer-list-item label="Dialog controller" targetUrl="/components/dialog-controller" />
-<materials-drawer-list-item label="Alert controller" targetUrl="/components/alert-controller" />
-<materials-drawer-list-item label="Badge" targetUrl="/components/badge" />
-{/* MENU GENERATION NEEDLE */}
+        <materials-drawer-list-item label="Dialog controller" targetUrl="/components/dialog-controller" />
+        <materials-drawer-list-item label="Alert controller" targetUrl="/components/alert-controller" />
+        <materials-drawer-list-item label="Badge" targetUrl="/components/badge" />
+        {/* MENU GENERATION NEEDLE */}
         <div id="outlet" slot="main" />
       </materials-drawer-with-top-app-bar>
     );

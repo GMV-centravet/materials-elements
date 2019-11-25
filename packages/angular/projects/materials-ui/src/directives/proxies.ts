@@ -54,7 +54,7 @@ export class MaterialsAutocomplete {
 proxyInputs(MaterialsAutocomplete, ['autocomplete', 'dense', 'label', 'maxSuggestions', 'trailingIcon', 'value']);
 
 export declare interface MaterialsBadge extends Components.MaterialsBadge {}
-@Component({ selector: 'materials-badge', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['color', 'inkColor', 'label'] })
+@Component({ selector: 'materials-badge', changeDetection: 0, template: '<ng-content></ng-content>' })
 export class MaterialsBadge {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef) {
@@ -62,7 +62,6 @@ export class MaterialsBadge {
     this.el = r.nativeElement;
   }
 }
-proxyInputs(MaterialsBadge, ['color', 'inkColor', 'label']);
 
 export declare interface MaterialsButton extends Components.MaterialsButton {}
 @Component({ selector: 'materials-button', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['block', 'color', 'dense', 'disabled', 'icon', 'outlined', 'raised', 'type', 'unelevated'] })
@@ -605,7 +604,7 @@ export class MaterialsSwitch {
 proxyInputs(MaterialsSwitch, ['checked', 'disabled', 'label']);
 
 export declare interface MaterialsTab extends Components.MaterialsTab {}
-@Component({ selector: 'materials-tab', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['active', 'icon', 'indicatorType', 'label', 'minWidth'] })
+@Component({ selector: 'materials-tab', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['active', 'icon', 'label'] })
 export class MaterialsTab {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef) {
@@ -613,8 +612,7 @@ export class MaterialsTab {
     this.el = r.nativeElement;
   }
 }
-proxyMethods(MaterialsTab, ['renderHtml']);
-proxyInputs(MaterialsTab, ['active', 'icon', 'indicatorType', 'label', 'minWidth']);
+proxyInputs(MaterialsTab, ['active', 'icon', 'label']);
 
 export declare interface MaterialsTabs extends Components.MaterialsTabs {}
 @Component({ selector: 'materials-tabs', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['activeTab', 'color', 'indicatorType', 'shrinkTabs'] })
