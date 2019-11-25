@@ -3,7 +3,7 @@
 Snackbars provide brief messages about app processes at the bottom of the screen. Snackbar Controller allows to create Snackbars easily.
 
 
-Material Design guidelines: https://material.io/design/components/buttons.html
+Material Design guidelines: https://material.io/components/snackbars
 
 ## Additional informations
 ### SnackBarOptions
