@@ -6,6 +6,10 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "build:core": "lerna run build --scope=@materials-ui/core",
+    "build:site": "lerna run build --scope=@materials-ui/site",
+    "start:core": "lerna run start --scope=@materials-ui/core",
+    "start:site": "lerna run start --scope=@materials-ui/site"
   }
 }

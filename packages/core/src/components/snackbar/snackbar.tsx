@@ -10,6 +10,7 @@ export class Snackbar {
   private snackbarEl: HTMLElement;
   private mdcSnackbar: MDCSnackbar;
 
+  /** Message displayed inside the snackbar */
   @Prop() label: string;
   @Prop() stacked: boolean;
   @Prop() leading: boolean;

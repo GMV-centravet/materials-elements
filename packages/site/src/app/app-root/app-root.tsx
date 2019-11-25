@@ -147,7 +147,7 @@ export class AppRoot {
       { path: '/components/alert-controller/api', component: 'app-alert-controller-tabs' },
       { path: '/components/badge', component: 'app-badge-tabs' },
       { path: '/components/badge/demo', component: 'app-badge-tabs' },
-      { path: '/components/badge/api', component: 'app-badge-tabs' },
+      { path: '/components/badge/api', component: 'app-badge-tabs' }
          /* ROUTE GENERATION NEEDLE */
     ]);
   }

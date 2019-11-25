@@ -15,6 +15,10 @@ export class SnackbarController {
 
   private controllerEl: HTMLMaterialsSnackbarControllerElement;
 
+  /**
+   * Show a Snackbar
+   * @param {SnackBarOptions} options
+   */
   @Method()
   async create(options: SnackBarOptions) {
     this.controllerEl = document.querySelector('materials-snackbar-controller');
