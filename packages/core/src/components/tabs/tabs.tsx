@@ -30,7 +30,7 @@ export class Tabs {
 
   componentWillLoad() {
     this.lookupTabs();
-    new MutationObserver((mutationsList, _observer) => {     
+    new MutationObserver((mutationsList, _observer) => {
       for (let mutation of mutationsList) {
         if (mutation.type === 'childList') {
           this.lookupTabs();
@@ -39,11 +39,9 @@ export class Tabs {
     }).observe(this.host, { attributes: false, childList: true, subtree: true });
   }
 
-  lookupTabs(){
+  lookupTabs() {
     this.tabElements = Array.from(this.host.querySelectorAll('materials-tab'));
-    this.tabElements.forEach(tab => {
-      tab.minWidth = this.shrinkTabs;
-      tab.indicatorType = this.indicatorType;
+    this.tabElements.forEach((tab: HTMLMaterialsTabElement) => {
       new MutationObserver((mutationsList, _observer) => {
         for (let mutation of mutationsList) {
           if (mutation.type === 'attributes' || mutation.type === 'childList') {
@@ -63,7 +61,7 @@ export class Tabs {
     this.mdcTabs.activateTab(this.activeTab);
     Array.from(this.host.shadowRoot.querySelectorAll('.mdc-tab')).forEach(tab => MDCTab.attachTo(tab));
   }
-  
+
   componentDidUpdate() {
     this.mdcTabs = new MDCTabBar(this.host.shadowRoot.querySelector('.mdc-tab-bar'));
     this.mdcTabs.listen('MDCTabBar:activated', (tabs: CustomEvent) => {
@@ -79,12 +77,12 @@ export class Tabs {
     }
   }
 
-  getIndicatorClasses(tab: HTMLMaterialsTabElement) {
+  getIndicatorClasses() {
     return {
       'mdc-tab-indicator__content': true,
-      'mdc-tab-indicator__content--icon': tab.indicatorType === 'icon',
-      'mdc-tab-indicator__content--underline': tab.indicatorType === 'underline',
-      'material-icons': tab.indicatorType === 'icon'
+      'mdc-tab-indicator__content--icon': this.indicatorType === 'icon',
+      'mdc-tab-indicator__content--underline': this.indicatorType === 'underline',
+      'material-icons': this.indicatorType === 'icon'
     }
   }
 
@@ -92,7 +90,7 @@ export class Tabs {
     return {
       'mdc-tab': true,
       'mdc-tab--active': tab.active,
-      'mdc-tab--min-width': tab.minWidth
+      'mdc-tab--min-width': this.shrinkTabs
     }
   }
 
@@ -111,24 +109,24 @@ export class Tabs {
                 {this.tabElements.map(tab => {
                   const badge = tab.querySelector('materials-badge');
                   return <button class={this.getTabClasses(tab)} role="tab" aria-selected="true" tabindex={tab.active ? '0' : '-1'}>
-                      <span class="mdc-tab__content">
-                        {tab.icon && <span class="mdc-tab__icon material-icons" aria-hidden="true">{tab.icon}</span>}
-                        <span class="mdc-tab__text-label">
-                          {tab.label ? tab.label : <slot />}
-                        </span>
+                    <span class="mdc-tab__content">
+                      {tab.icon && <span class="mdc-tab__icon material-icons" aria-hidden="true">{tab.icon}</span>}
+                      <span class="mdc-tab__text-label">
+                        {tab.label ? tab.label : <slot />}
                       </span>
-                      <span class={{ 'mdc-tab-indicator': true, 'mdc-tab-indicator--active': tab.active }}>
-                        <span class={this.getIndicatorClasses(tab)}>
-                          {tab.indicatorType === 'icon' && 'star'}
-                        </span>
+                    </span>
+                    <span class={{ 'mdc-tab-indicator': true, 'mdc-tab-indicator--active': tab.active }}>
+                      <span class={this.getIndicatorClasses()}>
+                        {this.indicatorType === 'icon' && 'star'}
                       </span>
-                      <span class="mdc-tab__ripple"></span>
-                      {
-                      badge && 
-                        <materials-badge>{badge.innerText}</materials-badge>
-                      }
-                    </button>;
-                  }
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                    {
+                      badge &&
+                      <materials-badge>{badge.innerText}</materials-badge>
+                    }
+                  </button>;
+                }
                 )}
               </div>
             </div>

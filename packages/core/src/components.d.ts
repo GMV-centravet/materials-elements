@@ -752,9 +752,7 @@ export namespace Components {
   interface MaterialsTab {
     'active': boolean;
     'icon': string;
-    'indicatorType': 'underline' | 'icon';
     'label': string;
-    'minWidth': boolean;
   }
   interface MaterialsTabs {
     'activeTab': number;
@@ -2001,9 +1999,7 @@ declare namespace LocalJSX {
   interface MaterialsTab extends JSXBase.HTMLAttributes<HTMLMaterialsTabElement> {
     'active'?: boolean;
     'icon'?: string;
-    'indicatorType'?: 'underline' | 'icon';
     'label'?: string;
-    'minWidth'?: boolean;
   }
   interface MaterialsTabs extends JSXBase.HTMLAttributes<HTMLMaterialsTabsElement> {
     'activeTab'?: number;

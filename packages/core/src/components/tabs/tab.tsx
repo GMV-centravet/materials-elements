@@ -15,10 +15,6 @@ export class Tab {
 
   @Prop() label: string;
 
-  @Prop() indicatorType: 'underline' | 'icon' = 'underline';
-
-  @Prop() minWidth: boolean;
-
   render() {
     return;
   }
