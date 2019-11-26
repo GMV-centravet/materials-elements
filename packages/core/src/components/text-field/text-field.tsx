@@ -40,6 +40,8 @@ export class TextField {
   @Prop() trailingIcon: string;
   @Prop() label: string;
   @Prop() name: string;
+  /** The maxlength attribute specifies the maximum number of characters */
+  @Prop() maxlength: number;
 
   /** Hide clear button (webkit + Edge, Moz not supported) */
   @Prop() hideNativeClear = false;
@@ -176,6 +178,7 @@ export class TextField {
             required={this.required}
             readonly={this.readonly}
             name={this.name}
+            maxlength={this.maxlength}
             ref={el => this.inputEl = el}
             onInput={(ev: any) => {
               this.value = ev.target.value;
