@@ -642,7 +642,7 @@ export class MaterialsTextArea {
 proxyInputs(MaterialsTextArea, ['cols', 'disabled', 'fullwidth', 'label', 'outlined', 'required', 'rows', 'value']);
 
 export declare interface MaterialsTextField extends Components.MaterialsTextField {}
-@Component({ selector: 'materials-text-field', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['customValidation', 'dense', 'disabled', 'focused', 'fullwidth', 'helperText', 'hideNativeClear', 'label', 'leadingIcon', 'leadingIconTitle', 'name', 'outlined', 'overflow', 'pattern', 'persistent', 'readonly', 'required', 'trailingIcon', 'trailingIconTitle', 'type', 'value', 'width'] })
+@Component({ selector: 'materials-text-field', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['customValidation', 'dense', 'disabled', 'focused', 'fullwidth', 'helperText', 'hideNativeClear', 'label', 'leadingIcon', 'leadingIconTitle', 'maxlength', 'name', 'outlined', 'overflow', 'pattern', 'persistent', 'readonly', 'required', 'trailingIcon', 'trailingIconTitle', 'type', 'value', 'width'] })
 export class MaterialsTextField {
   input!: EventEmitter<CustomEvent>;
   change!: EventEmitter<CustomEvent>;
@@ -656,7 +656,7 @@ export class MaterialsTextField {
   }
 }
 proxyMethods(MaterialsTextField, ['isValid', 'forceValidation']);
-proxyInputs(MaterialsTextField, ['customValidation', 'dense', 'disabled', 'focused', 'fullwidth', 'helperText', 'hideNativeClear', 'label', 'leadingIcon', 'leadingIconTitle', 'name', 'outlined', 'overflow', 'pattern', 'persistent', 'readonly', 'required', 'trailingIcon', 'trailingIconTitle', 'type', 'value', 'width']);
+proxyInputs(MaterialsTextField, ['customValidation', 'dense', 'disabled', 'focused', 'fullwidth', 'helperText', 'hideNativeClear', 'label', 'leadingIcon', 'leadingIconTitle', 'maxlength', 'name', 'outlined', 'overflow', 'pattern', 'persistent', 'readonly', 'required', 'trailingIcon', 'trailingIconTitle', 'type', 'value', 'width']);
 
 export declare interface MaterialsTimeField extends Components.MaterialsTimeField {}
 @Component({ selector: 'materials-time-field', changeDetection: 0, template: '<ng-content></ng-content>', inputs: ['customValidation', 'dense', 'disabled', 'focused', 'fullwidth', 'helperText', 'label', 'leadingIcon', 'outlined', 'persistent', 'required', 'timepicker', 'timepickerFormat', 'timepickerStep', 'value', 'width'] })

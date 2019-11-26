@@ -796,6 +796,10 @@ export namespace Components {
     * Add a title to the leading icon
     */
     'leadingIconTitle': string;
+    /**
+    * The maxlength attribute specifies the maximum number of characters
+    */
+    'maxlength': number;
     'name': string;
     'outlined': boolean;
     'overflow': boolean;
@@ -2047,6 +2051,10 @@ declare namespace LocalJSX {
     * Add a title to the leading icon
     */
     'leadingIconTitle'?: string;
+    /**
+    * The maxlength attribute specifies the maximum number of characters
+    */
+    'maxlength'?: number;
     'name'?: string;
     'onChange'?: (event: CustomEvent<any>) => void;
     'onInput'?: (event: CustomEvent<any>) => void;
