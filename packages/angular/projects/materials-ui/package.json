@@ -5,12 +5,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GMV-centravet/materials.git"
+    "url": "git+https://github.com/GMV-centravet/materials-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/GMV-centravet/materials/issues"
+    "url": "https://github.com/GMV-centravet/materials-ui/issues"
   },
-  "homepage": "https://github.com/GMV-centravet/materials",
+  "homepage": "https://github.com/GMV-centravet/materials-ui",
   "author": "GMV-Centravet",
   "publishConfig": {
     "access": "public"

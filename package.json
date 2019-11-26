@@ -11,5 +11,9 @@
     "build:site": "lerna run build --scope=@materials-ui/site",
     "start:core": "lerna run start --scope=@materials-ui/core",
     "start:site": "lerna run start --scope=@materials-ui/site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GMV-centravet/materials-ui.git"
   }
 }

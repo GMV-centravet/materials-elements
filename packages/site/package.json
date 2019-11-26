@@ -73,12 +73,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GMV-centravet/materials-site.git"
+    "url": "git+https://github.com/GMV-centravet/materials-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/GMV-centravet/materials-site/issues"
+    "url": "https://github.com/GMV-centravet/materials-ui/issues"
   },
-  "homepage": "https://github.com/GMV-centravet/materials-site",
+  "homepage": "https://github.com/GMV-centravet/materials-ui",
   "author": "GMV-Centravet",
   "gitHead": "25d71193c29263497a5f8cf61e2c064ec50b4ed4"
 }
