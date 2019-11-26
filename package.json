@@ -2,6 +2,10 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/travis-cli": "^8.2.0",
+    "husky": "^3.1.0",
     "lerna": "^3.16.4"
   },
   "scripts": {
@@ -15,5 +19,15 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GMV-centravet/materials-ui.git"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

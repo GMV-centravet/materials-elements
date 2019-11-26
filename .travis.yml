@@ -5,6 +5,7 @@ install:
   - npm install -g lerna
   - lerna bootstrap
 script:
+  - commitlint-travis
   - lerna run build
 after_success:
   - git checkout $TRAVIS_BRANCH
