@@ -1,27 +1,72 @@
-# Angular
+# Materials-UI for Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.15.
+This the home page of the Materials-UI Angular implementation. You can get more informations on Materials-UI [here](../../)
 
-## Development server
+## Purpose
+Materials-UI provides a set of Web Components implementing the Matierial Design Specifications. The Angular Implementation provides fully integrated Angular binding for those components.
+You can use them in any Angular app as if they were pure Angular Components.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+Add @materials-ui/angular package to project:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`npm install @materials-ui/angular@latest`
 
-## Build
+Import MaterialsUI module in app.module.ts:
+```ts
+import { MaterialsUiModule } from '@materials-ui/angular';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@NgModule({
+  declarations: [...],
+  imports: [
+    ...
+    MaterialsUiModule.forRoot(),
+    ...
+  ],
+  providers: [...],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Running unit tests
+Import in any submodule:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```ts
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MaterialsUiModule } from '@materials-ui/angular';
+import { MyComponent } from './my-component';
 
-## Running end-to-end tests
+@NgModule({
+  imports: [CommonModule, FormsModule, MaterialsUiModule],
+  declarations: [MyComponent],
+  exports: [MyComponent]
+})
+export class MyComponentModule { }
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+Use in any components:
+```ts
+import { Component, ViewChild } from '@angular/core';
+import { MaterialsButton } from '@materials-ui/angular';
 
-## Further help
+@Component({
+  selector: 'app-my-component',
+  template: `
+    <h1>Welcome to Materials-UI</h1>
+    <p>This a materials-button:</p>
+    <materials-button #btn (click)="clickButton()">Click Me</materials-button>
+  `
+})
+export class MyComponentModule {
+    @ViewChild('btn', { static: false })
+    private materialsButton: MaterialsButton;
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+    clickButton(){
+        console.log('Button was clicked');
+    }
+}
+
+```

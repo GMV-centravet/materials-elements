@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.org/GMV-centravet/materials-site.svg?branch=master)](https://travis-ci.org/GMV-centravet/materials-site) 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9d36e9a9-2ac9-4eed-afe5-9ff2bbd14f95/deploy-status)](https://app.netlify.com/sites/materials-components/deploys)
+[![Build Status](https://travis-ci.org/GMV-centravet/materials-mono.svg?branch=master)](https://travis-ci.org/GMV-centravet/materials-site)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c3b73dea-6b6f-4ae7-b148-c221f729d856/deploy-status)](https://app.netlify.com/sites/materials-ui/deploys)
 
 # Materials Site
 
-The [Materials Site](https://materials-components.netlify.com) is the place where you can find demos and documentation for the [Materials](https://github.com/GMV-centravet/materials) UI components collection.
+The [Materials Site](https://materials-ui.netlify.com) is the place where you can find demos and documentation for the [Materials](https://github.com/GMV-centravet/materials-mono) UI components collection.
 
->Note: Documentation and demos are work in progress, we plan to extend it as soon as possible. In the meantime, you can dig into the [source code](https://github.com/GMV-centravet/materials).
+>Note: Documentation and demos are work in progress, we plan to extend it as soon as possible. In the meantime, you can dig into the [source code](https://github.com/GMV-centravet/materials-mono).
 
 This app is build upon [Stencil](https://stenciljs.com/), an awesome compiler that generates Web Components !
 
@@ -46,4 +46,4 @@ npm run test.watch
 
 ## License
 
- - [MIT](https://raw.githubusercontent.com/ionic-team/stencil-site/master/LICENSE)
+ - [MIT](./LICENSE)
