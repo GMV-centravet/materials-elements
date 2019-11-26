@@ -1,4 +1,4 @@
-# Contributing to Materials-Mono
+# Contributing to Materials-UI
 
 We would be glad to receive your help developing this Stencil components library :wink:
 
@@ -36,10 +36,7 @@ We actively welcome your pull requests:
 7. Make sure your code lints. (`npm run eslint`)
 8. Issue that pull request!
 
-## Any contributions you make will be under the Apache 2.0 License
 
-In short, when you submit code changes, your submissions are understood to be under the same Apache 2.0 License that covers the project.
+## Report bugs using Github's [issues](https://github.com/GMV-centravet/materials-ui/issues)
 
-## Report bugs using Github's [issues](https://github.com/GMV-centravet/materials-mono/issues)
-
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/GMV-centravet/materials-mono/issues); That' all folks !
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/GMV-centravet/materials-ui/issues); That' all folks !

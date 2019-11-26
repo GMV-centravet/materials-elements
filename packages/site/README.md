@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.org/GMV-centravet/materials-mono.svg?branch=master)](https://travis-ci.org/GMV-centravet/materials-site)
+[![Build Status](https://travis-ci.org/GMV-centravet/materials-ui.svg?branch=master)](https://travis-ci.org/GMV-centravet/materials-ui)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c3b73dea-6b6f-4ae7-b148-c221f729d856/deploy-status)](https://app.netlify.com/sites/materials-ui/deploys)
 
 # Materials Site
 
-The [Materials Site](https://materials-ui.netlify.com) is the place where you can find demos and documentation for the [Materials](https://github.com/GMV-centravet/materials-mono) UI components collection.
+The [Materials Site](https://materials-ui.netlify.com) is the place where you can find demos and documentation for the [Materials](https://github.com/GMV-centravet/materials-ui) UI components collection.
 
->Note: Documentation and demos are work in progress, we plan to extend it as soon as possible. In the meantime, you can dig into the [source code](https://github.com/GMV-centravet/materials-mono).
+>Note: Documentation and demos are work in progress, we plan to extend it as soon as possible. In the meantime, you can dig into the [source code](https://github.com/GMV-centravet/materials-ui).
 
 This app is build upon [Stencil](https://stenciljs.com/), an awesome compiler that generates Web Components !
 
