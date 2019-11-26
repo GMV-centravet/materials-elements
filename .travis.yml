@@ -2,8 +2,8 @@ language: node_js
 node_js:
   - lts/*
 install:
-  - npm install -g lerna
-  - lerna bootstrap
+  - npm ci
+  - npm run bootstrap
 script:
   - commitlint-travis
   - lerna run build
