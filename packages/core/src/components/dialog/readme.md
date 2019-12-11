@@ -64,7 +64,8 @@ Type: `Promise<void>`
 
 ### `show() => Promise<void>`
 
-<span style="color:red">**[DEPRECATED]**</span> since 1.1.0 : use toggle() insteadOpen/Close dialog.<br/><br/>
+<span style="color:red">**[DEPRECATED]**</span> since 1.1.0 : use toggle() instead
+Open/Close dialog.<br/><br/>
 
 #### Returns
 
