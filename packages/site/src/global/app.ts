@@ -1,1 +1,1 @@
-import '@materials-ui/core';
+import '@materials-elements/core';

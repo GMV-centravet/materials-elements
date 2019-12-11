@@ -1,27 +1,27 @@
-# Getting Started with Materials-UI
+# Getting Started with Materials Elements
 
-There are several ways to use Materials-UI components in your projects. One of the strengths of Web Components is that they are framework agnostic, it means that you can use them whatever if you're using a Framework or not.
+There are several ways to use Materials Elements components in your projects. One of the strengths of Web Components is that they are framework agnostic, it means that you can use them whatever if you're using a Framework or not.
 
-For now, we provide two distributions of Materials-UI components :
-- @materials-ui/core : contains all components and can be use in any context.
-- @materials-ui/angular : angular components library based on the core package.
+For now, we provide two distributions of Materials Elements components :
+- @materials-elements/core : contains all components and can be use in any context.
+- @materials-elements/angular : angular components library based on the core package.
 
 
 ## Common advices
 
-Materials-UI helps you to easily use [Material icons](https://material.io/resources/icons). Don't forget to add them in the head section of your page: 
+Materials Elements helps you to easily use [Material icons](https://material.io/resources/icons). Don't forget to add them in the head section of your page: 
 ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 ```
 
-Materials-UI follow Material Design specifications, so the default font is [Roboto](https://fonts.google.com/specimen/Roboto). You always have the possibility to change it via CSS Variable, but we recommend you to include the Roboto font in the head section of your page:
+Materials Elements follow Material Design specifications, so the default font is [Roboto](https://fonts.google.com/specimen/Roboto). You always have the possibility to change it via CSS Variable, but we recommend you to include the Roboto font in the head section of your page:
 ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 ```
 
-## Add Materials-UI Components to your project
+## Add Materials Elements Components to your project
 
-To start using Materials-UI, you can proceed in different ways :
+To start using Materials Elements, you can proceed in different ways :
 
 ### Angular Application :
 
@@ -39,10 +39,10 @@ Take a look at the [Angular Getting Started](./packages/angular) to learn how to
 
 ### Stencil PWA
 
-Add @materials-ui/core package to your project:
+Add @materials-elements/core package to your project:
 
 ```shell 
-npm install @materials-ui/core@latest
+npm install @materials-elements/core@latest
 ```
 
 Import components in app.ts:
@@ -71,7 +71,7 @@ export class AppPage {
   render() {
     return (
       <Host>
-        <h1>Welcome to Materials-UI</h1>
+        <h1>Welcome to Materials Elements</h1>
         <p>This is a Materials Button:</p>
         <materials-button ref={el=>this.button = el} onClick={()=>this.handleClick()}>Click Me</materials-button>
       </Host>
@@ -81,16 +81,16 @@ export class AppPage {
 ```
 ### Others frameworks, or no framework: 
 
-You can use Materials-UI in any Webapp, just add materials-ui in the head section of your page:
+You can use Materials Elements in any Webapp, just add materials-elements in the head section of your page:
 ```html
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@materials-ui/core@latest/dist/materials/materials.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@materials-elements/core@latest/dist/materials/materials.esm.js"></script>
 
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@materials-ui/core@latest/dist/materials/materials.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@materials-elements/core@latest/dist/materials/materials.js"></script>
 </head>
 <body>
   <materials-button>Click Me</materials-button>

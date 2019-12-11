@@ -1,4 +1,4 @@
-import { Sort } from '@materials-ui/core/dist/types/components/datatable/sort';
+import { Sort } from '@materials-elements/core/dist/types/components/datatable/sort';
 import { Component, Element, h, State } from '@stencil/core';
 
 // import 'materials-snackbar-controller';

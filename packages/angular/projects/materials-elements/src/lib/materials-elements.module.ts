@@ -82,10 +82,10 @@ const DECLARATIONS = [
   imports: [CommonModule],
   exports: DECLARATIONS
 })
-export class MaterialsUiModule {
+export class MaterialsElementsModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: MaterialsUiModule,
+      ngModule: MaterialsElementsModule,
       providers: [
         {
           provide: APP_INITIALIZER,

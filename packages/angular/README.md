@@ -1,26 +1,26 @@
-# Materials-UI for Angular
+# Materials Elements for Angular
 
-This the home page of the Materials-UI Angular implementation. You can get more informations on Materials-UI [here](../../)
+This the home page of the Materials Elements Angular implementation. You can get more informations on Materials Elements [here](../../)
 
 ## Purpose
-Materials-UI provides a set of Web Components implementing the Matierial Design Specifications. The Angular Implementation provides fully integrated Angular binding for those components.
+Materials Elements provides a set of Web Components implementing the Matierial Design Specifications. The Angular Implementation provides fully integrated Angular binding for those components.
 You can use them in any Angular app as if they were pure Angular Components.
 
 ## Getting Started
 
-Add @materials-ui/angular package to project:
+Add @materials-elements/angular package to project:
 
-`npm install @materials-ui/angular@latest`
+`npm install @materials-elements/angular@latest`
 
-Import MaterialsUI module in app.module.ts:
+Import MaterialsElements module in app.module.ts:
 ```ts
-import { MaterialsUiModule } from '@materials-ui/angular';
+import { MaterialsElementsModule } from '@materials-elements/angular';
 
 @NgModule({
   declarations: [...],
   imports: [
     ...
-    MaterialsUiModule.forRoot(),
+    MaterialsElementsModule.forRoot(),
     ...
   ],
   providers: [...],
@@ -35,11 +35,11 @@ Import in any submodule:
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MaterialsUiModule } from '@materials-ui/angular';
+import { MaterialsElementsModule } from '@materials-elements/angular';
 import { MyComponent } from './my-component';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, MaterialsUiModule],
+  imports: [CommonModule, FormsModule, MaterialsElementsModule],
   declarations: [MyComponent],
   exports: [MyComponent]
 })
@@ -49,12 +49,12 @@ export class MyComponentModule { }
 Use in any components:
 ```ts
 import { Component, ViewChild } from '@angular/core';
-import { MaterialsButton } from '@materials-ui/angular';
+import { MaterialsButton } from '@materials-elements/angular';
 
 @Component({
   selector: 'app-my-component',
   template: `
-    <h1>Welcome to Materials-UI</h1>
+    <h1>Welcome to Materials Elements</h1>
     <p>This a materials-button:</p>
     <materials-button #btn (click)="clickButton()">Click Me</materials-button>
   `

@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "materials-ui": [
-        "dist/materials-ui"
+      "materials-elements": [
+        "dist/materials-elements"
       ],
-      "materials-ui/*": [
-        "dist/materials-ui/*"
+      "materials-elements/*": [
+        "dist/materials-elements/*"
       ]
     }
   },

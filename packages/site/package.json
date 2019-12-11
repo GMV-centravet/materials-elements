@@ -1,5 +1,5 @@
 {
-  "name": "@materials-ui/site",
+  "name": "@materials-elements/site",
   "version": "0.0.27",
   "description": "materials-site",
   "license": "MIT",
@@ -51,7 +51,7 @@
     "@material/theme": "~1.1.0",
     "@material/top-app-bar": "^2.1.1",
     "@material/typography": "~1.0.0",
-    "@materials-ui/core": "^0.0.27",
+    "@materials-elements/core": "^0.0.27",
     "@vaadin/router": "^1.2.0",
     "material-design-icons": "^3.0.1"
   },
@@ -73,12 +73,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GMV-centravet/materials-ui.git"
+    "url": "git+https://github.com/GMV-centravet/materials-elements.git"
   },
   "bugs": {
-    "url": "https://github.com/GMV-centravet/materials-ui/issues"
+    "url": "https://github.com/GMV-centravet/materials-elements/issues"
   },
-  "homepage": "https://github.com/GMV-centravet/materials-ui",
+  "homepage": "https://github.com/GMV-centravet/materials-elements",
   "author": "GMV-Centravet",
   "gitHead": "25d71193c29263497a5f8cf61e2c064ec50b4ed4"
 }

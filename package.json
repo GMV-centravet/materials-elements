@@ -11,14 +11,14 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "publish": "lerna publish",
-    "build:core": "lerna run build --scope=@materials-ui/core",
-    "build:site": "lerna run build --scope=@materials-ui/site",
-    "start:core": "lerna run start --scope=@materials-ui/core",
-    "start:site": "lerna run start --scope=@materials-ui/site"
+    "build:core": "lerna run build --scope=@materials-elements/core",
+    "build:site": "lerna run build --scope=@materials-elements/site",
+    "start:core": "lerna run start --scope=@materials-elements/core",
+    "start:site": "lerna run start --scope=@materials-elements/site"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GMV-centravet/materials-ui.git"
+    "url": "git+https://github.com/GMV-centravet/materials-elements.git"
   },
   "commitlint": {
     "extends": [

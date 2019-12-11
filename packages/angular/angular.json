@@ -3,33 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "materials-ui": {
+    "materials-elements": {
       "projectType": "library",
-      "root": "projects/materials-ui",
-      "sourceRoot": "projects/materials-ui/src",
+      "root": "projects/materials-elements",
+      "sourceRoot": "projects/materials-elements/src",
       "prefix": "materials",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/materials-ui/tsconfig.lib.json",
-            "project": "projects/materials-ui/ng-package.json"
+            "tsConfig": "projects/materials-elements/tsconfig.lib.json",
+            "project": "projects/materials-elements/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/materials-ui/src/test.ts",
-            "tsConfig": "projects/materials-ui/tsconfig.spec.json",
-            "karmaConfig": "projects/materials-ui/karma.conf.js"
+            "main": "projects/materials-elements/src/test.ts",
+            "tsConfig": "projects/materials-elements/tsconfig.spec.json",
+            "karmaConfig": "projects/materials-elements/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/materials-ui/tsconfig.lib.json",
-              "projects/materials-ui/tsconfig.spec.json"
+              "projects/materials-elements/tsconfig.lib.json",
+              "projects/materials-elements/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -39,5 +39,5 @@
       }
     }
   },
-  "defaultProject": "materials-ui"
+  "defaultProject": "materials-elements"
 }

@@ -20,5 +20,5 @@ deploy:
       branch: master
 
 after_deploy:
-  - sed -i '/"private"/d' packages/angular/dist/materials-ui/package.json
-  - cd packages/angular/dist/materials-ui && npm publish
+  - sed -i '/"private"/d' packages/angular/dist/materials-elements/package.json
+  - cd packages/angular/dist/materials-elements && npm publish

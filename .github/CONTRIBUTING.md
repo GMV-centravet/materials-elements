@@ -1,4 +1,4 @@
-# Contributing to Materials-UI
+# Contributing to materials-elements
 
 We would be glad to receive your help developing this Stencil components library :wink:
 
@@ -37,6 +37,6 @@ We actively welcome your pull requests:
 8. Issue that pull request!
 
 
-## Report bugs using Github's [issues](https://github.com/GMV-centravet/materials-ui/issues)
+## Report bugs using Github's [issues](https://github.com/GMV-centravet/materials-elements/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/GMV-centravet/materials-ui/issues); That' all folks !
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/GMV-centravet/materials-elements/issues); That' all folks !
