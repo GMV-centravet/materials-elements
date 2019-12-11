@@ -55,13 +55,14 @@
   },
   "devDependencies": {
     "@stencil/angular-output-target": "0.0.1",
-    "@stencil/core": "1.2.4",
+    "@stencil/core": "^1.9.0-1",
     "@stencil/sass": "1.0.1",
     "@types/jest": "24.0.13",
     "@types/puppeteer": "1.12.2",
     "jest": "24.8.0",
     "jest-cli": "24.8.0",
-    "puppeteer": "1.17.0"
+    "puppeteer": "1.17.0",
+    "showdown": "^1.9.1"
   },
   "publishConfig": {
     "access": "public"
