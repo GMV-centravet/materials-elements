@@ -6,10 +6,10 @@ The components are build with [Stencil](https://stenciljs.com/), a toolchain for
 
 ## Packages
 
-| Project     | Package                                                                                    | Version                                                                                                                         |                   Links                   |
-| ----------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------: |
-| **Core**    | [`@materials-elements/core`](https://www.npmjs.com/package/@materials-elements/core)       | [![version](https://img.shields.io/npm/v/@materials-elements/core/latest.svg)](https://www.npmjs.com/package/@ionic/core)       |  [`README.md`](packages/core/README.md)   |
-| **Angular** | [`@materials-elements/angular`](https://www.npmjs.com/package/@materials-elements/angular) | [![version](https://img.shields.io/npm/v/@materials-elements/angular/latest.svg)](https://www.npmjs.com/package/@ionic/angular) | [`README.md`](packages/angular/README.md) |
+| Project     | Package                                                                                    | Version                                                                                                                                      |                   Links                   |
+| ----------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------: |
+| **Core**    | [`@materials-elements/core`](https://www.npmjs.com/package/@materials-elements/core)       | [![version](https://img.shields.io/npm/v/@materials-elements/core/latest.svg)](https://www.npmjs.com/package/@materials-elements/core)       |  [`README.md`](packages/core/README.md)   |
+| **Angular** | [`@materials-elements/angular`](https://www.npmjs.com/package/@materials-elements/angular) | [![version](https://img.shields.io/npm/v/@materials-elements/angular/latest.svg)](https://www.npmjs.com/package/@materials-elements/angular) | [`README.md`](packages/angular/README.md) |
 
 ## Getting Started
 
