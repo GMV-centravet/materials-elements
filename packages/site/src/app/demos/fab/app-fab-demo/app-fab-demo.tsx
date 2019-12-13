@@ -13,8 +13,18 @@ export class AppFabDemo {
   render() {
     return (
       <Host>
-        <h1>FAB</h1>
-        <materials-fab icon="accessibility_new"></materials-fab>
+        <app-demo-code-block blockTitle="Simple FAB">
+          <materials-fab slot="demo" icon="accessibility_new"></materials-fab>
+          <code slot="code">
+            {`<materials-fab icon="accessibility_new"></materials-fab>`}
+          </code>
+        </app-demo-code-block>
+        <app-demo-code-block blockTitle="Simple FAB with label">
+          <materials-fab slot="demo" icon="accessibility_new" label="Accessibility"></materials-fab>
+          <code slot="code">
+            {`<materials-fab icon="accessibility_new"  label="Accessibility"></materials-fab>`}
+          </code>
+        </app-demo-code-block>
       </Host>
     );
   }
