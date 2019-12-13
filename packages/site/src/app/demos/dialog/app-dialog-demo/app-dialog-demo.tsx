@@ -14,12 +14,30 @@ export class AppDialogDemo {
   render() {
     return (
       <Host>
-        <materials-button raised onClick={() => this.dialog.open()}>Open dialog</materials-button>
-        <materials-dialog ref={el => this.dialog = el} dialogTitle="Awesome dialog" acceptButton="yes" cancelButton="No">
-          <div slot="body">
-            Is that dialog ok to you ?
+        <app-demo-code-block blockTitle="Simple dialog">
+          <div slot="demo">
+
+          <materials-button onClick={() => this.dialog.open()} raised>Open dialog</materials-button>
+          <materials-dialog dialogTitle="Awesome dialog" acceptButton="yes" cancelButton="No">
+            <div slot="body">
+              Is that dialog ok to you ?
+            </div>
+          </materials-dialog>
           </div>
-        </materials-dialog>
+          <code slot="code">
+            {`<materials-button raised>Open dialog</materials-button>
+<materials-dialog dialogTitle="Awesome dialog" acceptButton="yes" cancelButton="No">
+  <div slot="body">
+    Is that dialog ok to you ?
+  </div>
+</materials-dialog>
+<script>
+  const button = document.querySelector('materials-button');
+  const dialog = document.querySelector('materials-dialog');
+  button.addEventListener('click',()=>dialog.open());
+</script>`}
+          </code>
+        </app-demo-code-block>
       </Host>
     );
   }

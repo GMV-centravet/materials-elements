@@ -119,7 +119,7 @@ export class Dialog {
   }
 
   /**
-   * CloseS the dialog
+   * Closes the dialog
    */
   @Method()
   async close() {
