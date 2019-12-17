@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.29](https://github.com/GMV-centravet/materials-mono/compare/v0.0.28...v0.0.29) (2019-12-17)
+
+
+### Bug Fixes
+
+* **angular:** angular 8 aot + optimizer issue ([d37299a](https://github.com/GMV-centravet/materials-mono/commit/d37299a1d4c9f27de01910c9b9f44bde5a63f134))
+
+
+
+
+
 ## [0.0.28](https://github.com/GMV-centravet/materials-mono/compare/v0.0.27...v0.0.28) (2019-12-11)
 
 **Note:** Version bump only for package @materials-elements/angular-workspace
