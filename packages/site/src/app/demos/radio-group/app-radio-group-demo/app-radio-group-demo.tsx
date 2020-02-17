@@ -8,7 +8,20 @@ import { Component, h, Host } from '@stencil/core';
           render() {
             return (
               <Host>
-                TODO: Add radio-group demos
+                <app-demo-code-block blockTitle="Simple radio group">
+                  <materials-radio-group slot="demo" onChange={(ev) => alert('You will be coming on ' + ev.detail)}>
+                    <materials-radio label="Monday" value="Monday"></materials-radio>
+                    <materials-radio label="Tuesday" value="Tuesday"></materials-radio>
+                    <materials-radio label="Wednesday" value="Wednesday"></materials-radio>
+                  </materials-radio-group>
+                  <code slot="code">
+                    {`<materials-radio-group onChange={(ev) => alert('You will be coming on ' + ev.detail)}>
+  <materials-radio label="Monday" value="Monday"></materials-radio>
+  <materials-radio label="Tuesday" value="Tuesday"></materials-radio>
+  <materials-radio label="Wednesday" value="Wednesday"></materials-radio>
+</materials-radio-group>`}
+                  </code>
+                </app-demo-code-block>
               </Host>
             );
           }
