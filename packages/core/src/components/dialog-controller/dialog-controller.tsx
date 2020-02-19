@@ -16,6 +16,7 @@ export class MaterialsDialogController {
     dialog.dialogTitle = opts.title;
     dialog.actions = opts.actions;
     dialog.body = opts.body;
+    dialog.closeButton = opts.closeButton;
     dialog.addEventListener('accept', () => dialog.remove());
     dialog.addEventListener('cancel', () => dialog.remove());
     document.body.appendChild(dialog);
