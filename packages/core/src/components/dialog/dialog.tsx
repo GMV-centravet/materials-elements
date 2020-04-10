@@ -1,7 +1,7 @@
 import { MDCDialog } from '@material/dialog';
 import { Component, Element, Event, EventEmitter, h, Method, Prop, Watch } from '@stencil/core';
-
 import { DialogAction } from './dialog-action';
+
 
 @Component({
   tag: 'materials-dialog',
@@ -153,6 +153,7 @@ export class Dialog {
                 {this.actions.map(a => <button type="button" class="mdc-button mdc-dialog__button" title={a.title ? a.title : a.label} onClick={() => { if (a.action) a.action() }} data-mdc-dialog-action={a.role === 'accept' || a.role === 'close' ? a.role : null}>{a.label}</button>)}
               </footer>
               :
+              (!!this.acceptButton || !!this.closeButton) &&
               <footer class="mdc-dialog__actions">
                 <slot name="third-button" />
                 {!!this.cancelButton &&

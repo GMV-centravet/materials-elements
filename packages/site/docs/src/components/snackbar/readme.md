@@ -3,7 +3,7 @@
 Snackbars provide brief messages about app processes at the bottom of the screen. Snackbar Controller allows to create Snackbars easily.
 
 
-Material Design guidelines: https://material.io/design/components/buttons.html
+Material Design guidelines: https://material.io/components/snackbars
 
 ## Additional informations
 ### SnackBarOptions
@@ -11,7 +11,7 @@ Material Design guidelines: https://material.io/design/components/buttons.html
 | --------------- | --------------- | ------------------------------------------------------------------ | ---------- | --------- |
 | `label`         | `label`         | Message displayed in the Snackbar                                  | `string`   | `''`      |
 | `actionText`    | `actionText`    | Text of action button (if any)                                     | `string`   | `''`      |
-| `timeout`       | `timeout`       | Timeout fo the Snackbar. Between 4000 and 10000                    | `number`   | `4000`    |
+| `timeout`       | `timeout`       | Timeout for the Snackbar. Between 4000 and 10000                   | `number`   | `4000`    |
 | `stacked`       | `stacked`       | Action buttons positioned below the label instead of alongside it  | `boolean`  | `false`   |
 | `leading`       | `leading`       | Snackbar postioned in the leading edge of screen instead of center | `boolean`  | `false`   |
 | `dismissButton` | `dismissButton` | Can be closed manually before timeout                              | `boolean`  | `false`   |
