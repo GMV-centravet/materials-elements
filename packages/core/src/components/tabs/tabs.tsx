@@ -7,8 +7,6 @@ import { Component, Element, Event, EventEmitter, h, Host, Prop, State } from '@
   styleUrl: 'tabs.scss',
   shadow: true,
 })
-
-
 export class Tabs {
 
   @Element()
@@ -71,12 +69,6 @@ export class Tabs {
     Array.from(this.host.shadowRoot.querySelectorAll('.mdc-tab')).forEach(tab => MDCTab.attachTo(tab));
   }
 
-  getClasses() {
-    return {
-      'mdc-tab-bar': true
-    }
-  }
-
   getIndicatorClasses() {
     return {
       'mdc-tab-indicator__content': true,
@@ -102,32 +94,31 @@ export class Tabs {
         'materials-tab-secondary': this.color === 'secondary',
         'materials-tab-surface': this.color === 'surface'
       }}>
-        <nav class={this.getClasses()} role="tablist">
+        <nav class="mdc-tab-bar" role="tablist">
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
               <div class="mdc-tab-scroller__scroll-content">
                 {this.tabElements.map(tab => {
                   const badge = tab.querySelector('materials-badge');
-                  return <button class={this.getTabClasses(tab)} role="tab" aria-selected="true" tabindex={tab.active ? '0' : '-1'}>
-                    <span class="mdc-tab__content">
-                      {tab.icon && <span class="mdc-tab__icon material-icons" aria-hidden="true">{tab.icon}</span>}
-                      <span class="mdc-tab__text-label">
-                        {tab.label ? tab.label : <slot />}
+                  const label = tab.getAttribute('label') || tab.label;
+                  return (
+                    <button class={this.getTabClasses(tab)} role="tab" aria-selected="true" tabindex={tab.active ? '0' : '-1'}>
+                      <span class="mdc-tab__content">
+                        {tab.icon && <span class="mdc-tab__icon material-icons" aria-hidden="true">{tab.icon}</span>}
+                        <span class="mdc-tab__text-label">
+                          {label ? label : <slot />}
+                        </span>
                       </span>
-                    </span>
-                    <span class={{ 'mdc-tab-indicator': true, 'mdc-tab-indicator--active': tab.active }}>
-                      <span class={this.getIndicatorClasses()}>
-                        {this.indicatorType === 'icon' && 'star'}
+                      <span class={{ 'mdc-tab-indicator': true, 'mdc-tab-indicator--active': tab.active }}>
+                        <span class={this.getIndicatorClasses()}>
+                          {this.indicatorType === 'icon' && 'star'}
+                        </span>
                       </span>
-                    </span>
-                    <span class="mdc-tab__ripple"></span>
-                    {
-                      badge &&
-                      <materials-badge>{badge.innerText}</materials-badge>
-                    }
-                  </button>;
-                }
-                )}
+                      <span class="mdc-tab__ripple"></span>
+                      {badge && <materials-badge>{badge.innerText}</materials-badge>}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
