@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/GMV-centravet/materials-elements/compare/v0.0.29...v1.0.0) (2020-04-17)
+
+
+### Bug Fixes
+
+* empty footer if no actions ([#20](https://github.com/GMV-centravet/materials-elements/issues/20)) ([a9928b8](https://github.com/GMV-centravet/materials-elements/commit/a9928b8a959d4d08e8b196c9ce7b6fca5cc5669c))
+* **dialog:** closeButton not working with dialogController ([#16](https://github.com/GMV-centravet/materials-elements/issues/16)) ([c985b46](https://github.com/GMV-centravet/materials-elements/commit/c985b46b8880d70e10f585fd20837d61e6e54351))
+
+
+
+
+
 ## [0.0.29](https://github.com/GMV-centravet/materials-elements/compare/v0.0.28...v0.0.29) (2019-12-17)
 
 

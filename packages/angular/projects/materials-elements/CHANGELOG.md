@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/GMV-centravet/materials-elements/compare/v0.0.29...v1.0.0) (2020-04-17)
+
+**Note:** Version bump only for package @materials-elements/angular
+
+
+
+
+
 ## [0.0.29](https://github.com/GMV-centravet/materials-elements/compare/v0.0.28...v0.0.29) (2019-12-17)
 
 
