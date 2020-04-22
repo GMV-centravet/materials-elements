@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1-alpha.0](https://github.com/GMV-centravet/materials-elements/compare/v1.0.0...v1.0.1-alpha.0) (2020-04-22)
+
+
+### Features
+
+* **dialog:** action accept button can be disable ([#22](https://github.com/GMV-centravet/materials-elements/issues/22)) ([3e2ee2c](https://github.com/GMV-centravet/materials-elements/commit/3e2ee2c5b73db5387c3163bc9d59e42a3cb1c00e))
+
+
+
+
+
 # [1.0.0](https://github.com/GMV-centravet/materials-elements/compare/v0.0.29...v1.0.0) (2020-04-17)
 
 
