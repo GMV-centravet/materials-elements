@@ -1,6 +1,6 @@
 {
   "name": "@materials-elements/core",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
