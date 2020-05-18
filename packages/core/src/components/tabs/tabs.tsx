@@ -1,6 +1,6 @@
 import { MDCTab } from '@material/tab';
 import { MDCTabBar } from '@material/tab-bar';
-import { Component, Element, Event, EventEmitter, h, Host, Prop, State } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, h, Host, Prop, State, Watch } from '@stencil/core';
 
 @Component({
   tag: 'materials-tabs',
@@ -21,6 +21,11 @@ export class Tabs {
   @Prop() shrinkTabs: boolean;
 
   @Prop() activeTab: number = 0;
+  @Watch('activeTab') watchActiveTab() {
+    if (this.mdcTabs) {
+      this.mdcTabs.activateTab(this.activeTab);
+    }
+  }
 
   @State() tabElements: HTMLMaterialsTabElement[];
 
