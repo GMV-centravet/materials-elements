@@ -1,5 +1,4 @@
-import { MDCTab } from '@material/tab';
-import { MDCTabBar } from '@material/tab-bar';
+import { MDCTabBar, MDCTabBarActivatedEvent } from '@material/tab-bar';
 import { Component, Element, Event, EventEmitter, h, Host, Prop, State, Watch } from '@stencil/core';
 
 @Component({
@@ -9,72 +8,71 @@ import { Component, Element, Event, EventEmitter, h, Host, Prop, State, Watch } 
 })
 export class Tabs {
 
-  @Element()
-  private host: HTMLMaterialsTabsElement;
+  private navBar: HTMLElement;
+  private mdcTabs: MDCTabBar;
 
-  @Event() tabChange: EventEmitter<number>;
+  @Element() host: HTMLMaterialsTabsElement;
 
+  /** Liste des tabs */
+  @State() tabElements: HTMLMaterialsTabElement[];
+
+
+  /** Index de la tab sélectionner */
+  @Prop() activeTab = 0;
+
+  /** Couleur de fond de la tabs */
   @Prop() color: 'background' | 'primary' | 'secondary' | 'surface' = 'background';
 
+  /** type d'indicateur */
   @Prop() indicatorType: 'underline' | 'icon' = 'underline';
 
-  @Prop() shrinkTabs: boolean;
+  /** Tabs de taille minimum */
+  @Prop() shrinkTabs = false;
 
-  @Prop() activeTab: number = 0;
-  @Watch('activeTab') watchActiveTab() {
+
+  @Watch('activeTab') watchActiveTab(newVal: number) {
     if (this.mdcTabs) {
-      this.mdcTabs.activateTab(this.activeTab);
+      this.mdcTabs.activateTab(newVal);
     }
   }
 
-  @State() tabElements: HTMLMaterialsTabElement[];
+  /** Envoie l'index de la tab sélectionner */
+  @Event() tabChange: EventEmitter<number>;
 
-  private mdcTabs: MDCTabBar;
 
   componentWillLoad() {
-    this.lookupTabs();
-    new MutationObserver((mutationsList, _observer) => {
-      for (let mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-          this.lookupTabs();
-        }
-      }
-    }).observe(this.host, { attributes: false, childList: true, subtree: true });
-  }
-
-  lookupTabs() {
     this.tabElements = Array.from(this.host.querySelectorAll('materials-tab'));
-    this.tabElements.forEach((tab: HTMLMaterialsTabElement) => {
-      new MutationObserver((mutationsList, _observer) => {
-        for (let mutation of mutationsList) {
-          if (mutation.type === 'attributes' || mutation.type === 'childList') {
-            this.tabElements = [...this.tabElements];
-          }
-        }
-      }).observe(tab, { attributes: true, childList: true, subtree: true });
-    });
   }
 
   componentDidLoad() {
-    this.mdcTabs = new MDCTabBar(this.host.shadowRoot.querySelector('.mdc-tab-bar'));
-    this.mdcTabs.listen('MDCTabBar:activated', (tabs: CustomEvent) => {
-      const selectedIndex = tabs.detail.index;
-      this.tabChange.emit(selectedIndex);
+    this.mdcTabs = new MDCTabBar(this.navBar);
+    this.mdcTabs.listen('MDCTabBar:activated', (tabs: MDCTabBarActivatedEvent) => {
+      const { index } = tabs.detail;
+      this.activeTab = index;
+      this.tabChange.emit(index);
     });
     this.mdcTabs.activateTab(this.activeTab);
-    Array.from(this.host.shadowRoot.querySelectorAll('.mdc-tab')).forEach(tab => MDCTab.attachTo(tab));
   }
 
-  componentDidUpdate() {
-    this.mdcTabs = new MDCTabBar(this.host.shadowRoot.querySelector('.mdc-tab-bar'));
-    this.mdcTabs.listen('MDCTabBar:activated', (tabs: CustomEvent) => {
-      const selectedIndex = tabs.detail.index;
-      this.tabChange.emit(selectedIndex);
-    });
-    Array.from(this.host.shadowRoot.querySelectorAll('.mdc-tab')).forEach(tab => MDCTab.attachTo(tab));
+  private getHostClasses() {
+    const { color } = this;
+    return {
+      'materials-tab-background': color === 'background',
+      'materials-tab-primary': color === 'primary',
+      'materials-tab-secondary': color === 'secondary',
+      'materials-tab-surface': color === 'surface'
+    }
   }
 
-  getIndicatorClasses() {
+  private getTabClasses(tab: HTMLMaterialsTabElement) {
+    return {
+      'mdc-tab': true,
+      'mdc-tab--active': tab.active,
+      'mdc-tab--min-width': this.shrinkTabs
+    }
+  }
+
+  private getIndicatorClasses() {
     return {
       'mdc-tab-indicator__content': true,
       'mdc-tab-indicator__content--icon': this.indicatorType === 'icon',
@@ -83,23 +81,10 @@ export class Tabs {
     }
   }
 
-  getTabClasses(tab: HTMLMaterialsTabElement) {
-    return {
-      'mdc-tab': true,
-      'mdc-tab--active': tab.active,
-      'mdc-tab--min-width': this.shrinkTabs
-    }
-  }
-
   render() {
     return (
-      <Host class={{
-        'materials-tab-background': this.color === 'background',
-        'materials-tab-primary': this.color === 'primary',
-        'materials-tab-secondary': this.color === 'secondary',
-        'materials-tab-surface': this.color === 'surface'
-      }}>
-        <nav class="mdc-tab-bar" role="tablist">
+      <Host class={this.getHostClasses()}>
+        <nav ref={e => this.navBar = e} class="mdc-tab-bar" role="tablist" >
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
               <div class="mdc-tab-scroller__scroll-content">
