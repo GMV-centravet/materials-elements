@@ -17,9 +17,9 @@
 
 ## Events
 
-| Event       | Description                           | Type                  |
-| ----------- | ------------------------------------- | --------------------- |
-| `tabChange` | Envoie l'index de la tab sélectionner | `CustomEvent<number>` |
+| Event       | Description                           | Type                                             |
+| ----------- | ------------------------------------- | ------------------------------------------------ |
+| `tabChange` | Envoie l'index de la tab sélectionner | `CustomEvent<{ index: number; label: string; }>` |
 
 
 ## CSS Custom Properties

@@ -41,17 +41,38 @@ export class Tabs {
 
 
   componentWillLoad() {
-    this.tabElements = Array.from(this.host.querySelectorAll('materials-tab'));
+    const tabElements = Array.from(this.host.querySelectorAll('materials-tab'));
+    this.tabElements = [...tabElements];
+    this.tabObserver();
   }
 
   componentDidLoad() {
-    this.mdcTabs = new MDCTabBar(this.navBar);
-    this.mdcTabs.listen('MDCTabBar:activated', (tabs: MDCTabBarActivatedEvent) => {
-      const { index } = tabs.detail;
+    this.initTabBar();
+    this.mdcTabs.activateTab(this.activeTab);
+  }
+
+  componentDidUpdate() {
+    this.mdcTabs.initialize();
+  }
+
+  private tabObserver() {
+    new MutationObserver((mutations, _observer) => {
+      for (const mutation of mutations) {
+        if (mutation.type === "childList") {
+          const tabElements = Array.from(this.host.querySelectorAll('materials-tab'));
+          this.tabElements = [...tabElements];
+        }
+      }
+    }).observe(this.host, {childList: true});
+  }
+
+  private initTabBar() {
+    this.mdcTabs = MDCTabBar.attachTo(this.navBar);
+    this.mdcTabs.listen('MDCTabBar:activated', (tab: MDCTabBarActivatedEvent) => {
+      const { index } = tab.detail;
       this.activeTab = index;
       this.tabChange.emit(index);
     });
-    this.mdcTabs.activateTab(this.activeTab);
   }
 
   private getHostClasses() {
