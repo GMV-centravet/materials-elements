@@ -2062,7 +2062,7 @@ declare namespace LocalJSX {
     /**
     * Envoie l'index de la tab sélectionner
     */
-    'onTabChange'?: (event: CustomEvent<number>) => void;
+    'onTabChange'?: (event: CustomEvent<{index: number, label: string}>) => void;
     /**
     * Tabs de taille minimum
     */
