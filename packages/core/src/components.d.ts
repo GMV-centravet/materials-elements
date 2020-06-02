@@ -758,14 +758,35 @@ export namespace Components {
     'label': string;
   }
   interface MaterialsTab {
+    /**
+    * Indique si la tab est active
+    */
     'active': boolean;
+    /**
+    * Icon de la librairie Material
+    */
     'icon': string;
+    /**
+    * Titre de la tab
+    */
     'label': string;
   }
   interface MaterialsTabs {
+    /**
+    * Index de la tab sélectionner
+    */
     'activeTab': number;
+    /**
+    * Couleur de fond de la tabs
+    */
     'color': 'background' | 'primary' | 'secondary' | 'surface';
+    /**
+    * type d'indicateur
+    */
     'indicatorType': 'underline' | 'icon';
+    /**
+    * Tabs de taille minimum
+    */
     'shrinkTabs': boolean;
   }
   interface MaterialsTextArea {
@@ -2012,15 +2033,39 @@ declare namespace LocalJSX {
     'onChange'?: (event: CustomEvent<any>) => void;
   }
   interface MaterialsTab {
+    /**
+    * Indique si la tab est active
+    */
     'active'?: boolean;
+    /**
+    * Icon de la librairie Material
+    */
     'icon'?: string;
-    'label'?: string;
+    /**
+    * Titre de la tab
+    */
+    'label': string;
   }
   interface MaterialsTabs {
+    /**
+    * Index de la tab sélectionner
+    */
     'activeTab'?: number;
+    /**
+    * Couleur de fond de la tabs
+    */
     'color'?: 'background' | 'primary' | 'secondary' | 'surface';
+    /**
+    * type d'indicateur
+    */
     'indicatorType'?: 'underline' | 'icon';
+    /**
+    * Envoie l'index de la tab sélectionner
+    */
     'onTabChange'?: (event: CustomEvent<number>) => void;
+    /**
+    * Tabs de taille minimum
+    */
     'shrinkTabs'?: boolean;
   }
   interface MaterialsTextArea {
