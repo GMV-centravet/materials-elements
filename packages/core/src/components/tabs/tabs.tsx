@@ -37,7 +37,7 @@ export class Tabs {
   }
 
   /** Envoie l'index de la tab sélectionner */
-  @Event() tabChange: EventEmitter<number>;
+  @Event() tabChange: EventEmitter<{index: number, label: string}>;
 
 
   componentWillLoad() {
@@ -71,7 +71,7 @@ export class Tabs {
     this.mdcTabs.listen('MDCTabBar:activated', (tab: MDCTabBarActivatedEvent) => {
       const { index } = tab.detail;
       this.activeTab = index;
-      this.tabChange.emit(index);
+      this.tabChange.emit({index, label});
     });
   }
 
