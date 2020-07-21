@@ -4,16 +4,17 @@ import { Component, Prop } from '@stencil/core';
 @Component({
   tag: 'materials-tab',
   styleUrl: 'tab.scss',
-  shadow: false
 })
-
 export class Tab {
 
-  @Prop() active: boolean;
+  /** Indique si la tab est active */
+  @Prop() active = false;
 
+  /** Icon de la librairie Material */ 
   @Prop() icon: string;
 
-  @Prop() label: string;
+  /** Titre de la tab */ 
+  @Prop() label!: string;
 
   render() {
     return;

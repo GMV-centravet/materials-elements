@@ -7,19 +7,19 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                                                    | Default        |
-| --------------- | ---------------- | ----------- | ------------------------------------------------------- | -------------- |
-| `activeTab`     | `active-tab`     |             | `number`                                                | `0`            |
-| `color`         | `color`          |             | `"background" \| "primary" \| "secondary" \| "surface"` | `'background'` |
-| `indicatorType` | `indicator-type` |             | `"icon" \| "underline"`                                 | `'underline'`  |
-| `shrinkTabs`    | `shrink-tabs`    |             | `boolean`                                               | `undefined`    |
+| Property        | Attribute        | Description                  | Type                                                    | Default        |
+| --------------- | ---------------- | ---------------------------- | ------------------------------------------------------- | -------------- |
+| `activeTab`     | `active-tab`     | Index de la tab sélectionner | `number`                                                | `0`            |
+| `color`         | `color`          | Couleur de fond de la tabs   | `"background" \| "primary" \| "secondary" \| "surface"` | `'background'` |
+| `indicatorType` | `indicator-type` | type d'indicateur            | `"icon" \| "underline"`                                 | `'underline'`  |
+| `shrinkTabs`    | `shrink-tabs`    | Tabs de taille minimum       | `boolean`                                               | `false`        |
 
 
 ## Events
 
-| Event       | Description | Type                  |
-| ----------- | ----------- | --------------------- |
-| `tabChange` |             | `CustomEvent<number>` |
+| Event       | Description                           | Type                  |
+| ----------- | ------------------------------------- | --------------------- |
+| `tabChange` | Envoie l'index de la tab sélectionner | `CustomEvent<number>` |
 
 
 ## CSS Custom Properties

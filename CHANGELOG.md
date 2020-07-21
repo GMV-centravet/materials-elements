@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/GMV-centravet/materials-elements/compare/v1.0.2-alpha.0...v1.0.2) (2020-06-30)
+
+**Note:** Version bump only for package root
+
+
+
+
+
+## [1.0.2-alpha.0](https://github.com/GMV-centravet/materials-elements/compare/v1.0.1...v1.0.2-alpha.0) (2020-06-02)
+
+
+### Bug Fixes
+
+* **tabs:** multi event emited ([#24](https://github.com/GMV-centravet/materials-elements/issues/24)) ([8c89c27](https://github.com/GMV-centravet/materials-elements/commit/8c89c276a0a984d5b423b124b4d10e5a61805d89))
+* **tabs:** watch activeTab change ([#23](https://github.com/GMV-centravet/materials-elements/issues/23)) ([f7a7da7](https://github.com/GMV-centravet/materials-elements/commit/f7a7da7985b7c91e3678327ecb3f6934ee38c742))
+
+
+
+
+
 ## [1.0.1](https://github.com/GMV-centravet/materials-elements/compare/v1.0.1-alpha.0...v1.0.1) (2020-04-23)
 
 **Note:** Version bump only for package root

@@ -1,6 +1,6 @@
 {
   "name": "@materials-elements/site",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "materials-site",
   "license": "MIT",
   "module": "dist/index.mjs",
@@ -51,7 +51,7 @@
     "@material/theme": "~1.1.0",
     "@material/top-app-bar": "^2.1.1",
     "@material/typography": "~1.0.0",
-    "@materials-elements/core": "^1.0.1",
+    "@materials-elements/core": "^1.0.2",
     "@vaadin/router": "^1.2.0",
     "material-design-icons": "^3.0.1"
   },
